@@ -91,6 +91,13 @@ nav a:hover {
     hsl(300deg 100% 99%) 100%
   ); */
 }
+#particles-js {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+}
 .hero h1 {
   width: 1200px;
   position: relative;
@@ -212,6 +219,7 @@ nav a:hover {
 .project {
   position: relative;
   display: flex;
+  flex-direction: row;
   width: 100vw;
   height: 100vh;
   color: white;
@@ -219,15 +227,15 @@ nav a:hover {
 #cell-painting-btn {
   position: absolute;
   left: 10%;
-  bottom: 30%;
+  top: 70%;
 }
 #kiendo-net-btn {
   position: absolute;
   left: calc(50vw + 10%);
-  bottom: 30%;
+  top: 70%;
 }
 .project-description {
-  width: 50vw;
+  width: 50%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -280,7 +288,11 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   display: flex;
+  transition: transform 0.7s ease-out;
   box-shadow: 2px 4px 4px 0px rgb(0, 0, 0);
+}
+.changeVis {
+  transform: translateY(-100vh);
 }
 .participant-data {
   width: 40%;
@@ -289,31 +301,41 @@ nav a:hover {
   flex-direction: column;
   justify-content: space-around;
 }
-#first-dev {
-  width: 550px;
-  height: 300px;
-  border-radius: 50px;
-  position: absolute;
-  top: 80px;
-  background-color: #434343;
-  right: 10vw;
-}
-#second-dev {
-  width: 600px;
-  height: 333px;
-  border-radius: 50px;
-  position: absolute;
-  top: 200px;
-  right: 45vw;
-  background-color: #484646;
-  z-index: -2;
-}
+#first-dev,
+#first-mentor,
 #third-dev {
   width: 550px;
-  height: 300px;
+  height: 30%;
   border-radius: 50px;
   position: absolute;
   background-color: #444141;
+}
+#first-dev {
+  top: 80px;
+  right: 10vw;
+}
+#second-dev,
+#second-mentor {
+  width: 600px;
+  height: 33%;
+  border-radius: 50px;
+  position: absolute;
+  background-color: #484646;
+  z-index: -2;
+}
+#first-mentor {
+  top: calc(300px + 100vh);
+  right: 10vw;
+}
+#second-mentor {
+  top: calc(200px + 100vh);
+  right: 45vw;
+}
+#second-dev {
+  top: 200px;
+  right: 45vw;
+}
+#third-dev {
   bottom: 10vh;
   right: 25vw;
 }
@@ -351,6 +373,7 @@ nav a:hover {
 }
 .form {
   width: 30%;
+  height: 400px;
 }
 .line {
   width: 40px;
@@ -420,14 +443,13 @@ nav a:hover {
 .contact-data {
   border-radius: 10%;
   width: 20%;
-  height: 80%;
 }
 .contact-data ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   list-style: none;
-  height: 80%;
+  height: 350px;
 }
 .contact-data li {
   display: flex;
@@ -435,7 +457,7 @@ nav a:hover {
 }
 .footerDiv {
   position: absolute;
-  height: 200px;
+  height: calc(100vh - 600px);
   width: 100vw;
   top: calc(600vh + 600px);
 }
@@ -445,7 +467,7 @@ footer {
   z-index: -5;
   bottom: 0px;
   justify-content: center;
-  height: 200px;
+  height: calc(100vh - 600px);
   width: 100vw;
   color: var(--text-color);
   background-color: var(--gunmetal);
