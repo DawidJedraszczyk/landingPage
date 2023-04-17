@@ -1,3 +1,4 @@
+/* FADE ANIMATION */
 const fadersLeft = document.querySelectorAll(".fade-in-left");
 const fadersRight = document.querySelectorAll(".fade-in-right");
 const faders = document.querySelectorAll(".fade-in");
@@ -35,6 +36,8 @@ fadersRight.forEach((fader) => {
   appearOnScroll.observe(fader);
 });
 
+/*  SCROLL DO DIVA  */
+
 $(document).ready(function () {
   $("a.smooth-scroll").click(function (e) {
     e.preventDefault();
@@ -49,6 +52,8 @@ $(document).ready(function () {
     }
   });
 });
+
+/*  ANIMATION FOR #TEAM */
 
 function showMentors() {
   mentors.classList.add("active");
@@ -72,3 +77,15 @@ let developers = document.getElementById("Devs");
 let mentors = document.getElementById("Mentors");
 mentors.addEventListener("click", showMentors);
 developers.addEventListener("click", showDevs);
+
+/*    NAVBAR BACKGROUND ON SCROLL
+
+ window.addEventListener("scroll", function () {
+  const navbar = document.querySelector("header");
+  const scrollHeight = window.pageYOffset;
+  if (scrollHeight > window.innerHeight - 100) {
+    navbar.classList.add("header-scrolled");
+  } else {
+    navbar.classList.remove("header-scrolled");
+  }
+}); */

@@ -33,7 +33,12 @@ header {
   width: 100vw;
   height: 80px;
   align-items: center;
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
   z-index: 2;
+}
+.header-scrolled {
+  background-color: var(--gunmetal);
 }
 nav {
   width: 1200px;
@@ -372,6 +377,7 @@ nav a:hover {
   background-color: var(--gunmetal);
 }
 .form {
+  margin-top: 150px;
   width: 30%;
   height: 400px;
 }
@@ -441,6 +447,7 @@ nav a:hover {
   margin-right: 20px;
 }
 .contact-data {
+  margin-top: 100px;
   border-radius: 10%;
   width: 20%;
 }
@@ -457,6 +464,7 @@ nav a:hover {
 }
 .footerDiv {
   position: absolute;
+  z-index: -10;
   height: calc(100vh - 600px);
   width: 100vw;
   top: calc(600vh + 600px);
@@ -481,7 +489,8 @@ footer {
   margin-bottom: 10px;
 }
 .footerContainer {
-  margin-top: 50px;
+  position: absolute;
+  bottom: 100px;
   display: flex;
   justify-content: space-between;
   width: 1200px;
@@ -489,7 +498,7 @@ footer {
 .segments {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 20%;
 }
 .segments ul {
   margin-top: 10px;
