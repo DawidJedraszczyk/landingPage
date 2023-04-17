@@ -19,7 +19,6 @@ const appearOnScroll = new IntersectionObserver(function (
       setTimeout(function () {
         entry.target.classList.add("appear");
       }, delay);
-      delay += 100;
       appearOnScroll.unobserve(entry.target);
     }
   });
@@ -45,7 +44,7 @@ $(document).ready(function () {
         {
           scrollTop: target.offset().top,
         },
-        2000
+        2500
       );
     }
   });
@@ -56,6 +55,7 @@ function showMentors() {
   developers.classList.remove("active");
   const elements = document.querySelectorAll(".participant");
   for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.remove("fade-in");
     elements[i].classList.add("changeVis");
   }
 }
@@ -64,6 +64,7 @@ function showDevs() {
   developers.classList.add("active");
   const elements = document.querySelectorAll(".participant");
   for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.remove("fade-in");
     elements[i].classList.remove("changeVis");
   }
 }
