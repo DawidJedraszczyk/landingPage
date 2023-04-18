@@ -10,6 +10,9 @@
 * {
   padding: 0px;
   margin: 0px;
+  letter-spacing: 1.4px;
+  word-spacing: 1px;
+  line-height: 1.5em;
 }
 h1 {
   font-size: 40px;
@@ -64,9 +67,6 @@ nav li {
 a {
   font-size: 15px; /* ustawia rozmiar czcionki */
   text-decoration: none; /* usuwa podkreślenie */
-  color: white;
-}
-nav a:hover {
   color: white;
 }
 #contact-btn {
@@ -125,11 +125,11 @@ nav a:hover {
   background-color: var(--backgroundblack);
 }
 .feature:hover {
-  transition: background-color 0.1s ease-in-out;
+  transition: background-color 50ms ease-in-out;
   background-color: #2e2e2c;
 }
 .feature:hover img {
-  transition: filter 0.1s ease-in-out;
+  transition: filter 50ms ease-in-out;
   filter: grayscale(0);
 }
 .feature img {
@@ -301,10 +301,16 @@ nav a:hover {
 }
 .participant-data {
   width: 40%;
+  line-height: 1em;
   height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.participant-data h1,
+.participant-data h2,
+.participant-data ul {
+  line-height: 1em;
 }
 #first-dev,
 #first-mentor,
@@ -377,7 +383,7 @@ nav a:hover {
   background-color: var(--gunmetal);
 }
 .form {
-  margin-top: 150px;
+  margin-top: 50px;
   width: 30%;
   height: 400px;
 }
