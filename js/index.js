@@ -1,6 +1,4 @@
 /* FADE ANIMATION */
-const fadersLeft = document.querySelectorAll(".fade-in-left");
-const fadersRight = document.querySelectorAll(".fade-in-right");
 const faders = document.querySelectorAll(".fade-in");
 appearOptions = {
   threshold: 0,
@@ -26,13 +24,7 @@ const appearOnScroll = new IntersectionObserver(function (
 },
 appearOptions);
 
-fadersLeft.forEach((fader) => {
-  appearOnScroll.observe(fader);
-});
 faders.forEach((fader) => {
-  appearOnScroll.observe(fader);
-});
-fadersRight.forEach((fader) => {
   appearOnScroll.observe(fader);
 });
 

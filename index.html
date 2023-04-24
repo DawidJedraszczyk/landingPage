@@ -5,14 +5,16 @@
     <title>LandingPage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header>
       <nav id="nav">
-        <a href="#contact" class="smooth-scroll"><h1 id="brandName">Logo</h1></a>
+        <a href="#contact" class="smooth-scroll"><h2 id="brandName">Logo</h2></a>
         <ul>
           <li id="home-btn"><a href="#hero" class="smooth-scroll">Home</a></li>
           <li id="projects-btn"><a href="#projects" class="smooth-scroll">Business cases</a></li>
@@ -25,14 +27,20 @@
     <main>
       <section class="hero" id="hero">
       <div id="particles-js"></div>
-          <h1>AI-based tools made practical for bioscientists!</h1>
+      <div class="wrapper">
+          <H1>AI-based tools made practical for</h1>
+          <div class="words">
+              <span>bioscientists</span>
+              <span>physicians</span>
+          </div>
+      </div>
       </section>
 
       <section class="features" id="features">
-        <div class="feature">
-          <img class="fade-in-left" src="img/utilize data science.jpeg" alt="">
-          <div class="feature-description fade-in-right">
-            <h1>Utilize data science the way you like it!</h1>
+        <div class="feature fade-in">
+          <img src="img/utilize data science.jpeg" alt="">
+          <div class="feature-description">
+            <h2>Utilize data science the way you like it!</h2>
             <p>
               Our goal is to help science institutions introduce and utilize
               Artificial Intelligence in an effortless and affordable way. To
@@ -42,9 +50,9 @@
             <!--<button class="checkout-btn">Check out!</button>-->
           </div>
         </div>
-        <div class="feature">
-          <div class="feature-description fade-in-left">
-            <h1>Utilize data science the way you like it!</h1>
+        <div class="feature fade-in">
+          <div class="feature-description">
+            <h2>Utilize data science the way you like it!</h2>
             <p>
               Our goal is to help science institutions introduce and utilize
               Artificial Intelligence in an effortless and affordable way. To
@@ -53,30 +61,30 @@
             </p>
             <!--<button class="checkout-btn">Check out!</button>-->
           </div>
-          <img class="fade-in-right" src="img/hero.jpeg" alt="">
+          <img src="img/hero.jpeg" alt="">
         </div>
       </section>
       <section class="catch-phrase">
-          <h1>CANCER NO MORE</h1>
+          <h2>CANCER NO MORE</h2>
           <p>Our proprietary platform applies AI to a tumor's dark genome to personalize therapy for every cancer patient.</p>
           <button id="glass-btn">OUR TECHNOLOGY</button>
       </section>
-      <video id="catch-phrase-video" src="img/video.mp4" autoplay loop></video>
+      <!-- <video id="catch-phrase-video" src="img/video.mp4" autoplay loop></video> -->
       <section class="projects" id="projects">
         <div class="project" >
           <div class="project-description">
-            <h1>Cell Painting</h1>
+            <h2>Cell Painting</h2>
             <p>Aiding the analysis of high throughput screening through the use of explainable and interpretable AI.</p>
-            <button onclick="location.href='template/cellPainting.html'" id="cell-painting-btn" class="checkout-btn"><b>Check out!</b></button>
+            <button onclick="location.href='template/cellPainting.html'" class="checkout-btn"><b>Check out!</b></button>
           </div>
           <img src="img/cellpainting.jpg" alt="cell-Painting-project">
         </div>
         <div class="project">
           <img src="img/tumorgrading.jpg" alt="Kiendo-net-project">
           <div class="project-description">
-          <h1>KiendoNet</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus euismod, mauris in consequat tristique, risus nisl condimentum libero, id lobortis odio tellus sit amet dolor. Pellentesque ac velit vel ante rhoncus molestie.</p>
-          <button onclick="location.href='template/kiendoNet.html'" id="kiendo-net-btn" class="checkout-btn"><b>Check out!</b></button>
+          <h2>KiendoNet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus euismod, mauris in consequat tristique, risus nisl condimentum libero.</p>
+          <button onclick="location.href='template/kiendoNet.html'" class="checkout-btn"><b>Check out!</b></button>
         </div></div>
       </section>
       <section class="team" id="team">
@@ -86,9 +94,9 @@
           <div class="participant fade-in" id="first-dev">
             <img src="img/2.jpg" alt="participant">
             <div class="participant-data">
-            <h1 style="font-size: 30px">Imie Nazwisko</h1>
-            <h2 style="font-size: 25px">Python Developer
-            </h2>
+            <h2 style="font-size: 30px">Imie Nazwisko</h2>
+            <h3 style="font-size: 25px">Python Developer
+            </h3>
             <ul style="font-size: 20px; list-style: none;">
               <li>10+ years of experience </li>
             </ul>
@@ -97,9 +105,9 @@
           <div class="participant fade-in" id="second-dev">
             <img src="img/1.jpg" alt="participant">
             <div class="participant-data">
-            <h1 style="font-size: 30px">Imie Nazwisko</h1>
-            <h2 style="font-size: 25px">Bioinformatician
-            </h2>
+            <h2 style="font-size: 30px">Imie Nazwisko</h2>
+            <h3 style="font-size: 25px">Bioinformatician
+            </h3>
             <ul style="font-size: 20px; list-style: none;">
               <li>10+ years of experience </li>
             </ul>
@@ -108,9 +116,9 @@
           <div class="participant fade-in" id="third-dev">
             <img src="img/3.jpg" alt="participant">
             <div class="participant-data">
-            <h1 style="font-size: 30px">Imie Nazwisko</h1>
-            <h2 style="font-size: 25px">Python Developer
-            </h2>
+            <h2 style="font-size: 30px">Imie Nazwisko</h2>
+            <h3 style="font-size: 25px">Python Developer
+            </h3>
             <ul style="font-size: 20px; list-style: none;">
               <li>10+ years of experience </li>
             </ul>
@@ -120,9 +128,9 @@
           <div class="participant" id="first-mentor">
             <img src="img/2.jpg" alt="participant">
             <div class="participant-data">
-            <h1 style="font-size: 30px">Imie Nazwisko</h1>
-            <h2 style="font-size: 25px">Python Developer
-            </h2>
+            <h2 style="font-size: 30px">Imie Nazwisko</h2>
+            <h3 style="font-size: 25px">Python Developer
+            </h3>
             <ul style="font-size: 20px; list-style: none;">
               <li>30+ years of experience, </li>
             </ul>
@@ -131,9 +139,9 @@
           <div class="participant" id="second-mentor">
             <img src="img/1.jpg" alt="participant">
             <div class="participant-data">
-            <h1 style="font-size: 30px">Imie Nazwisko</h1>
-            <h2 style="font-size: 25px">Bioinformatician
-            </h2>
+            <h2 style="font-size: 30px">Imie Nazwisko</h2>
+            <h3 style="font-size: 25px">Bioinformatician
+            </h3>
             <ul style="font-size: 20px; list-style: none;">
               <li>30+ years of experience, </li>
             </ul>
@@ -163,7 +171,7 @@
                   <input class="app-form-control" placeholder="MESSAGE">
                 </div>
                 <div class="app-form-group buttons">
-                  <button class="app-form-button">SEND</button>
+                  <button class="checkout-btn" id="form-button">SEND</button>
                 </div>
               </div>
             </div>
