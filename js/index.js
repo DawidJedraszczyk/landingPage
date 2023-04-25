@@ -1,3 +1,22 @@
+const lazyLoadingIMGs = document.querySelectorAll("img");
+
+const lazyLoad = (target) => {
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        const src = img.getAttribute("data-lazy");
+        img.setAttribute("src", src);
+        img.classList.add("fade-in");
+
+        observer.disconnect();
+      }
+    });
+  });
+};
+
+lazyLoadingIMGs.forEach(lazyLoad);
+
 /* FADE ANIMATION */
 const faders = document.querySelectorAll(".fade-in");
 appearOptions = {
@@ -48,6 +67,9 @@ $(document).ready(function () {
 /*  ANIMATION FOR #TEAM */
 
 function showMentors() {
+  document.getElementById("first-mentor").style.opacity = "1";
+
+  document.getElementById("second-mentor").style.opacity = "1";
   mentors.classList.add("active");
   developers.classList.remove("active");
   const elements = document.querySelectorAll(".participant");
@@ -64,6 +86,9 @@ function showDevs() {
     elements[i].classList.remove("fade-in");
     elements[i].classList.remove("changeVis");
   }
+  document.getElementById("first-mentor").style.opacity = "0";
+
+  document.getElementById("second-mentor").style.opacity = "0";
 }
 let developers = document.getElementById("Devs");
 let mentors = document.getElementById("Mentors");

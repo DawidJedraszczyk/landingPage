@@ -24,14 +24,15 @@ h4 {
 body {
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 header {
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0px;
-  left: 0px;
-  width: 100vw;
+  left: calc((100vw - 1200px) / 2);
+  width: 1200px;
   height: 80px;
   align-items: center;
   background-color: transparent;
@@ -60,16 +61,48 @@ nav ul {
   list-style: none;
 }
 nav li {
-  margin-left: 20px;
+  margin-right: 20px;
+}
+nav input {
+  display: none;
 }
 a {
   font-size: 15px; /* ustawia rozmiar czcionki */
   text-decoration: none; /* usuwa podkreślenie */
   color: white;
 }
+nav label {
+  display: flex;
+  align-items: center;
+}
 #contact-btn {
-  border: 2px solid var(--purple);
-  background-color: var(--purple);
+  height: 30px;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  background: hsla(286, 67%, 56%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(286, 67%, 56%, 1) 0%,
+    hsla(286, 71%, 37%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(286, 67%, 56%, 1) 0%,
+    hsla(286, 71%, 37%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(286, 67%, 56%, 1) 0%,
+    hsla(286, 71%, 37%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B642DA", endColorstr="#811BA0", GradientType=1 );
   border-radius: 14px;
   padding: 5px 10px;
   color: white;
@@ -83,7 +116,26 @@ a {
   justify-content: space-around;
   width: 100vw;
   height: 100vh;
-  background-color: var(--gunmetal);
+  background: rgb(17, 43, 52);
+  background: -moz-linear-gradient(
+    122deg,
+    rgba(17, 43, 52, 1) 0%,
+    rgba(33, 33, 31, 1) 100%,
+    rgba(14, 34, 41, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    122deg,
+    rgba(17, 43, 52, 1) 0%,
+    rgba(33, 33, 31, 1) 100%,
+    rgba(14, 34, 41, 1) 100%
+  );
+  background: linear-gradient(
+    122deg,
+    rgba(17, 43, 52, 1) 0%,
+    rgba(33, 33, 31, 1) 100%,
+    rgba(14, 34, 41, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#112b34",endColorstr="#0e2229",GradientType=1);
   /* background-image: linear-gradient(
     145deg,
     hsl(196deg 33% 18%) 0%,
@@ -126,7 +178,13 @@ a {
   font-size: 45px;
   height: 100%;
   padding-left: 10px;
-  color: var(--purple);
+  /* color: var(--purple); */
+  background-image: linear-gradient(45deg, #b642da, #811ba0);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   animation: spin_words 10s infinite;
 }
 @keyframes spin_words {
@@ -143,27 +201,41 @@ a {
   position: absolute;
   top: 100vh;
   width: 100vw;
-  height: 100vh;
-  background-color: var(--backgroundblack);
+  background: -moz-linear-gradient(
+    122deg,
+    rgba(33, 33, 31, 1) 0%,
+    rgba(23, 23, 21, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    122deg,
+    rgba(33, 33, 31, 1) 0%,
+    rgba(23, 23, 21, 1) 100%
+  );
+  background: linear-gradient(
+    122deg,
+    rgba(33, 33, 31, 1) 0%,
+    rgba(23, 23, 21, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#21211f",endColorstr="#171715",GradientType=1);
+  height: 1000px;
 }
 .feature {
   width: 100vw;
   cursor: pointer;
-  height: 50vh;
+  height: 500px;
   display: flex;
-  background-color: var(--backgroundblack);
 }
 .feature:hover {
-  transition: background-color 50ms ease-in-out;
-  background-color: #2e2e2c;
+  transition: background-color 100ms ease-in-out;
+  background-color: #3e3e3b;
 }
 .feature:hover img {
-  transition: filter 50ms ease-in-out;
+  transition: filter 100ms ease-in-out;
   filter: grayscale(0);
 }
 .feature img {
   width: 50vw;
-  height: 50vh;
+  height: 500px;
   object-fit: cover;
   filter: grayscale(100%);
 }
@@ -174,8 +246,7 @@ a {
   justify-content: center;
   align-items: center;
   color: white;
-  width: 50vw;
-  height: 50vh;
+  width: 50%;
 }
 .checkout-btn {
   border: 1px solid #122e36;
@@ -208,7 +279,7 @@ a {
 }
 .catch-phrase {
   position: absolute;
-  top: 200vh;
+  top: calc(100vh + 1000px);
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -249,17 +320,36 @@ a {
 }
 .projects {
   width: 100vw;
-  height: 100vh;
+  height: 1000px;
   position: absolute;
-  top: 300vh;
-  background-color: var(--indigo);
+  top: calc(200vh + 1000px);
+  background: rgb(39, 67, 97);
+  background: -moz-linear-gradient(
+    122deg,
+    rgba(39, 67, 97, 1) 0%,
+    rgba(33, 33, 31, 1) 100%,
+    rgba(32, 56, 81, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    122deg,
+    rgba(39, 67, 97, 1) 0%,
+    rgba(33, 33, 31, 1) 100%,
+    rgba(32, 56, 81, 1) 100%
+  );
+  background: linear-gradient(
+    122deg,
+    rgba(39, 67, 97, 1) 0%,
+    rgba(33, 33, 31, 1) 100%,
+    rgba(32, 56, 81, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#274361",endColorstr="#203851",GradientType=1);
 }
 .project {
   position: relative;
   display: flex;
   flex-direction: row;
   width: 100vw;
-  height: 50vh;
+  height: 500px;
   color: white;
 }
 .project-description {
@@ -274,19 +364,38 @@ a {
   margin-left: 20%;
 }
 .project-description p {
-  width: 500px;
+  width: 60%;
   margin-left: 20%;
 }
 .project img {
   width: 50vw;
-  height: 50vh;
+  height: 500px;
 }
 .team {
   position: absolute;
-  top: 400vh;
+  top: calc(200vh + 2000px);
   width: 100vw;
-  height: 100vh;
-  background-color: var(--backgroundblack);
+  height: 1000px;
+  background: rgb(33, 33, 31);
+  background: -moz-linear-gradient(
+    122deg,
+    rgba(33, 33, 31, 1) 0%,
+    rgba(33, 33, 31, 1) 100%,
+    rgba(23, 23, 21, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    122deg,
+    rgba(33, 33, 31, 1) 0%,
+    rgba(33, 33, 31, 1) 100%,
+    rgba(23, 23, 21, 1) 100%
+  );
+  background: linear-gradient(
+    122deg,
+    rgba(33, 33, 31, 1) 0%,
+    rgba(33, 33, 31, 1) 100%,
+    rgba(23, 23, 21, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#21211f",endColorstr="#171715",GradientType=1);
   z-index: -2;
 }
 #small-ping-circle {
@@ -315,11 +424,11 @@ a {
   justify-content: center;
   align-items: center;
   display: flex;
-  transition: transform 0.7s ease-out;
+  transition: all 0.7s ease-out;
   box-shadow: 2px 4px 4px 0px rgb(0, 0, 0);
 }
 .changeVis {
-  transform: translateY(-100vh);
+  transform: translateY(-1000px);
 }
 .participant-data {
   width: 70%;
@@ -341,7 +450,27 @@ a {
   height: 30%;
   border-radius: 50px;
   position: absolute;
-  background-color: #444141;
+  background: hsla(0, 2%, 26%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(0, 2%, 26%, 1) 0%,
+    hsla(0, 2%, 19%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(0, 2%, 26%, 1) 0%,
+    hsla(0, 2%, 19%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(0, 2%, 26%, 1) 0%,
+    hsla(0, 2%, 19%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#444141", endColorstr="#312F2F", GradientType=1 );
 }
 #first-dev {
   top: 80px;
@@ -353,16 +482,38 @@ a {
   height: 33%;
   border-radius: 50px;
   position: absolute;
-  background-color: #484646;
+  background: hsla(0, 3%, 24%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(0, 3%, 24%, 1) 0%,
+    hsla(0, 3%, 17%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(0, 3%, 24%, 1) 0%,
+    hsla(0, 3%, 17%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(0, 3%, 24%, 1) 0%,
+    hsla(0, 3%, 17%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3E3A3A", endColorstr="#2E2B2B", GradientType=1 );
   z-index: -2;
 }
 #first-mentor {
-  top: calc(300px + 100vh);
+  top: calc(300px + 1000px);
   right: 10vw;
+  opacity: 0;
 }
 #second-mentor {
-  top: calc(200px + 100vh);
+  top: calc(200px + 1000px);
   right: 45vw;
+  opacity: 0;
 }
 #second-dev {
   top: 200px;
@@ -402,7 +553,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  top: 500vh;
+  top: calc(200vh + 3000px);
   width: 100vw;
   height: 700px;
   color: white;
@@ -461,7 +612,27 @@ a {
   border-bottom-color: #ddd;
 }
 #form-button {
-  background-color: var(--purple);
+  background: hsla(286, 67%, 56%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(286, 67%, 56%, 1) 0%,
+    hsla(286, 71%, 37%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(286, 67%, 56%, 1) 0%,
+    hsla(286, 71%, 37%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(286, 67%, 56%, 1) 0%,
+    hsla(286, 71%, 37%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B642DA", endColorstr="#811BA0", GradientType=1 );
 }
 .app-form-button:hover {
   font-size: 19px;
@@ -494,7 +665,7 @@ a {
   z-index: -10;
   height: 300px;
   width: 100vw;
-  top: calc(500vh + 700px);
+  top: calc(200vh + 3700px);
 }
 footer {
   display: flex;
@@ -579,36 +750,135 @@ footer li {
     transform: translateX(0);
   }
 }
-/* Styles for screens smaller than 768px (e.g., smartphones) */
-@media only screen and (max-width: 1350px) {
-  #features ul,
-  .participants,
-  .projectsContainer,
-  .container,
-  #contact form,
-  #contact-data ul {
-    padding: 0px;
+
+@media only screen and (max-width: 1300px) {
+  label ul {
+    display: none;
+  }
+  label .hamburger {
+    position: absolute;
+    top: 38px;
+    right: 50px;
+    width: 30px;
+    height: 4px;
+    background: #ffffff;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+
+  label .hamburger:after,
+  label .hamburger:before {
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+  }
+
+  label .hamburger:before {
+    top: -10px;
+  }
+
+  label .hamburger:after {
+    bottom: -10px;
+  }
+
+  label input:checked + .menu {
+    box-shadow: 0 0 0 100vw #cbcbcb, 0 0 0 100vh #cbcbcb;
+    border-radius: 0;
+  }
+
+  label input:checked + .menu .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  label input:checked + .menu .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  label input:checked + .menu .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  label input:checked + .menu + ul {
+    opacity: 1;
+  }
+
+  label ul {
+    z-index: 200;
+    position: absolute;
+    list-style: none;
+    top: 500px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.4s 0s ease-in-out;
+  }
+
+  label a {
+    font-size: 50px;
+    display: block;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+  }
+  label a:hover {
+    color: var(--purple);
+    text-decoration: underline;
+  }
+  a {
+    font-size: 15px; /* ustawia rozmiar czcionki */
+    text-decoration: none; /* usuwa podkreślenie */
+    color: white;
+  }
+  #contact-btn {
+    position: relative;
+    font-size: 15px;
+    width: auto;
+    right: 100px;
+    top: 0px;
+  }
+  header {
+    left: calc((100vw - 1000px) / 2);
     width: 1000px;
   }
-  .project {
-    width: 440px;
+  .wrapper h1,
+  .words span {
+    font-size: 35px;
   }
-  .contact-info-with-frame iframe {
-    width: 300px;
+  #first-dev {
+    top: 40px;
+    right: 20px;
   }
-  .contact-info-with-frame {
-    justify-content: space-around;
+  #second-dev {
+    top: 300px;
+    left: 80px;
   }
-  .segments {
-    justify-content: space-around;
+  #third-dev {
+    bottom: 50px;
+    right: 100px;
   }
-  .teamParticipant h4 {
-    width: 150px;
-    text-align: center;
+  #first-mentor {
+    top: 1600px;
   }
-}
-
-@media only screen and (max-width: 1000px) {
+  #second-mentor {
+    left: 100px;
+  }
+  .footerContainer {
+    width: 90vw;
+  }
 }
 @media only screen and (max-width: 500px) {
 }
