@@ -262,6 +262,7 @@ nav label {
   color: white;
   height: 50px;
   font-weight: bold;
+  z-index: 2;
 }
 .feature-description h2,
 .feature-description p {
@@ -447,7 +448,7 @@ nav label {
 #first-mentor,
 #third-dev {
   width: 550px;
-  height: 30%;
+  height: 300px;
   border-radius: 50px;
   position: absolute;
   background: hsla(0, 2%, 26%, 1);
@@ -646,7 +647,6 @@ nav label {
   margin-top: 100px;
   height: 300px;
   border-radius: 10%;
-  width: 30%;
 }
 .contact-data ul {
   display: flex;
@@ -696,7 +696,7 @@ footer {
 .segments {
   display: flex;
   justify-content: space-between;
-  width: 20%;
+  width: 200px;
 }
 .segments ul {
   margin-top: 10px;
@@ -752,13 +752,16 @@ footer li {
 }
 
 @media only screen and (max-width: 1300px) {
+  nav {
+    width: 1000px;
+  }
   label ul {
     display: none;
   }
   label .hamburger {
-    position: absolute;
-    top: 38px;
-    right: 50px;
+    position: relative;
+    top: 0px;
+    left: 50px;
     width: 30px;
     height: 4px;
     background: #ffffff;
@@ -854,13 +857,24 @@ footer li {
     left: calc((100vw - 1000px) / 2);
     width: 1000px;
   }
-  .wrapper h1,
-  .words span {
-    font-size: 35px;
-  }
   #first-dev {
     top: 40px;
     right: 20px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+  }
+  .wrapper h1 {
+    line-height: 1.6;
+  }
+  .words {
+    position: relative;
+    bottom: 58px;
+    left: 70px;
+    height: 60px;
   }
   #second-dev {
     top: 300px;
@@ -880,7 +894,99 @@ footer li {
     width: 90vw;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1050px) {
+  nav {
+    width: 90vw;
+  }
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+  }
+  .wrapper h1 {
+    line-height: 1.6;
+  }
+  .words {
+    position: relative;
+    bottom: 58px;
+    left: 270px;
+    height: 60px;
+  }
+  .features img,
+  .project img {
+    width: 100vw;
+    opacity: 0.17;
+    position: absolute;
+    filter: grayscale(0);
+  }
+  .feature-description,
+  .project-description {
+    position: relative;
+    width: 65%;
+    left: calc((100vw - 65%) / 2);
+  }
+  .team {
+    height: 1200px;
+  }
+  #second-dev,
+  #first-dev,
+  #third-dev,
+  #first-mentor,
+  #second-mentor {
+    width: 450px;
+    height: 250px;
+  }
+  #first-dev {
+    top: 150px;
+    right: calc((100vw - 550px) / 2 - 30px);
+  }
+  #second-dev {
+    top: 500px;
+    left: calc((100vw - 550px) / 2);
+  }
+  #third-dev {
+    top: 850px;
+    right: calc((100vw - 550px) / 2);
+  }
+  #first-mentor {
+    top: 1350px;
+    right: calc((100vw - 550px) / 2 - 50px);
+  }
+  #second-mentor {
+    top: 1700px;
+    right: calc((100vw - 550px) / 2 - 50px);
+  }
+  #contact {
+    top: calc(200vh + 3200px);
+  }
+  .footerDiv {
+    top: calc(200vh + 3899px);
+  }
+  #Devs {
+    top: 50px;
+    left: calc(50vw + 50px);
+  }
+  #Mentors {
+    top: 50px;
+    left: calc(50vw - 200px);
+  }
+  #contact {
+    height: 1050px;
+    flex-direction: column;
+  }
+  .form {
+    width: 70%;
+  }
+  .contact-data {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+  .footerContainer {
+    width: 75vw;
+  }
+  .footerDiv {
+    top: calc(200vh + 4248px);
+  }
 }
 @media only screen and (max-width: 370px) {
 }

@@ -68,7 +68,6 @@ $(document).ready(function () {
 
 function showMentors() {
   document.getElementById("first-mentor").style.opacity = "1";
-
   document.getElementById("second-mentor").style.opacity = "1";
   mentors.classList.add("active");
   developers.classList.remove("active");
@@ -77,8 +76,14 @@ function showMentors() {
     elements[i].classList.remove("fade-in");
     elements[i].classList.add("changeVis");
   }
+  document.getElementById("first-dev").style.opacity = "0";
+  document.getElementById("second-dev").style.opacity = "0";
+  document.getElementById("third-dev").style.opacity = "0";
 }
 function showDevs() {
+  document.getElementById("first-dev").style.opacity = "1";
+  document.getElementById("second-dev").style.opacity = "1";
+  document.getElementById("third-dev").style.opacity = "1";
   mentors.classList.remove("active");
   developers.classList.add("active");
   const elements = document.querySelectorAll(".participant");
@@ -87,7 +92,6 @@ function showDevs() {
     elements[i].classList.remove("changeVis");
   }
   document.getElementById("first-mentor").style.opacity = "0";
-
   document.getElementById("second-mentor").style.opacity = "0";
 }
 let developers = document.getElementById("Devs");
