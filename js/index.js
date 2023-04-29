@@ -1,3 +1,4 @@
+// LAZY LOADING IMGS
 const lazyLoadingIMGs = document.querySelectorAll("img");
 
 const lazyLoad = (target) => {
@@ -47,7 +48,7 @@ faders.forEach((fader) => {
   appearOnScroll.observe(fader);
 });
 
-/*  SCROLL DO DIVA  */
+/*  SCROLL TO DIV  */
 
 $(document).ready(function () {
   $("a.smooth-scroll").click(function (e) {
@@ -98,6 +99,73 @@ let developers = document.getElementById("Devs");
 let mentors = document.getElementById("Mentors");
 mentors.addEventListener("click", showMentors);
 developers.addEventListener("click", showDevs);
+
+function handleFullWidthSizing() {
+  const scrollbarWidth = window.innerWidth - document.body.clientWidth;
+
+  document.style.width = `calc(100vw - ${scrollbarWidth}px)`;
+}
+
+// 3D CHART
+
+const plotDiv = document.getElementById("plot");
+fetch("../json/chart.json")
+  .then((response) => response.json())
+  .then((data) => {
+    // grupuj dane według typu
+    const groups = {};
+    data.forEach((item) => {
+      if (!groups[item.type]) {
+        groups[item.type] = {
+          x: [],
+          y: [],
+          z: [],
+          type: "scatter3d",
+          mode: "markers",
+          name: item.type,
+          marker: {
+            size: 5,
+          },
+        };
+      }
+      groups[item.type].x.push(item.TSNE_3d_0);
+      groups[item.type].y.push(item.TSNE_3d_1);
+      groups[item.type].z.push(item.TSNE_3d_2);
+    });
+
+    // stwórz tablicę z danymi
+    const plotData = Object.values(groups);
+
+    // przypisz każdemu typowi unikalny kolor
+    const colors = Plotly.d3.scale.category10().range();
+    plotData.forEach((trace, i) => {
+      trace.marker.color = colors[i % colors.length];
+    });
+
+    // ustaw layout wykresu
+    const layout = {
+      margin: { l: 0, r: 0, b: 0, t: 0 },
+      scene: {
+        xaxis: { title: "TSNE_3d_0", color: "white" },
+        yaxis: { title: "TSNE_3d_1", color: "white" },
+        zaxis: { title: "TSNE_3d_2", color: "white" },
+      },
+      paper_bgcolor: "#21211f",
+      plot_bgcolor: "white",
+      bgcolor: "#21211f",
+      font: {
+        color: "white",
+      },
+      legend: {
+        x: 1,
+        xanchor: "right",
+        y: 1,
+      },
+    };
+
+    // utwórz wykres w elemencie HTML o klasie 'chart'
+    Plotly.newPlot(plotDiv, plotData, layout, { responsive: true });
+  });
 
 /*    NAVBAR BACKGROUND ON SCROLL
 
