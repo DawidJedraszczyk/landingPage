@@ -437,7 +437,7 @@ nav label {
 #first-dev,
 #first-mentor,
 #third-dev {
-  width: 550px;
+  width: 500px;
   height: 300px;
   border-radius: 50px;
   position: absolute;
@@ -464,13 +464,13 @@ nav label {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#444141", endColorstr="#312F2F", GradientType=1 );
 }
 #first-dev {
-  top: 80px;
+  top: 150px;
   right: 10%;
 }
 #second-dev,
 #second-mentor {
-  width: 600px;
-  height: 33%;
+  width: 500px;
+  height: 300px;
   border-radius: 50px;
   position: absolute;
   background: hsla(0, 3%, 24%, 1);
@@ -855,7 +855,7 @@ footer li {
     width: 1000px;
   }
   #first-dev {
-    top: 40px;
+    top: 120px;
     right: 20px;
   }
 

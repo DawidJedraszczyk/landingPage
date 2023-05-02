@@ -438,7 +438,7 @@ a {
 .footerDiv {
   position: absolute;
   z-index: -10;
-  height: calc(100vh - 500px);
+  height: 500px;
   width: 100vw;
   top: calc(170vh + 1699px);
 }
@@ -448,7 +448,7 @@ footer {
   z-index: -5;
   bottom: 0px;
   justify-content: center;
-  height: calc(100vh - 500px);
+  height: 500px;
   width: 100vw;
   color: var(--text-color);
   background-color: var(--gunmetal);
@@ -546,7 +546,7 @@ footer li {
   }
 
   .footerDiv {
-    top: calc(200vh + 1749px);
+    top: calc(170vh + 2050px);
   }
   .images img {
     height: 96px;
@@ -579,12 +579,12 @@ footer li {
 }
 @media only screen and (max-width: 600px) {
   .project-description {
-    height: 1200px;
+    height: 1400px;
   }
   #contact {
-    top: calc(170vh + 1200px);
+    top: calc(170vh + 1400px);
   }
   .footerDiv {
-    top: calc(200vh + 2149px);
+    top: calc(170vh + 2549px);
   }
 }
