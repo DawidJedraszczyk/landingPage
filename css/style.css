@@ -189,10 +189,10 @@ nav label {
 @keyframes spin_words {
   100%,
   0% {
-    transform: translateY(-16%);
+    transform: translateY(-6%);
   }
   50% {
-    transform: translateY(-116%);
+    transform: translateY(-106%);
   }
 }
 
@@ -248,20 +248,43 @@ nav label {
   width: 50%;
 }
 .checkout-btn {
-  border: 1px solid #122e36;
   font-size: 19px;
   border-radius: 16px;
+  border: 0px;
   cursor: pointer;
   font-weight: bold;
   box-shadow: 4px 4px 4px 0px rgbA(0, 0, 0, 0.25);
-  background-color: var(--gunmetal);
+  background: hsla(286, 67%, 56%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(286, 67%, 56%, 1) 0%,
+    hsla(286, 71%, 37%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(286, 67%, 56%, 1) 0%,
+    hsla(286, 71%, 37%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(286, 67%, 56%, 1) 0%,
+    hsla(286, 71%, 37%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B642DA", endColorstr="#811BA0", GradientType=1 );
+  border-radius: 14px;
+  padding: 5px 10px;
+  color: white;
   width: 150px;
   margin-left: 20%;
   margin-top: 40px;
   color: white;
   height: 50px;
   font-weight: bold;
-  z-index: 2;
+  z-index: 1;
 }
 .feature-description h2,
 .feature-description p {
@@ -352,9 +375,13 @@ nav label {
 .team {
   overflow: hidden;
   position: absolute;
-  top: calc(100vh + 2350px);
+  top: calc(100vh + 2450px);
   width: 100%;
   height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background: rgb(33, 33, 31);
   background: -moz-linear-gradient(
     122deg,
@@ -402,20 +429,22 @@ nav label {
   color: white;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   display: flex;
-  transition: all 0.7s ease-out;
+  transition: all 1s ease-out;
   box-shadow: 2px 4px 4px 0px rgb(0, 0, 0);
+  width: 380px;
+  height: 280px;
 }
 .changeVis {
   transform: translateY(-1000px);
 }
 .participant-data {
-  width: 70%;
-  line-height: 1em;
-  height: 150px;
+  position: relative;
+  bottom: 35%;
+  line-height: 2em;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 .participant ul {
   list-style: none;
@@ -423,7 +452,7 @@ nav label {
 .participant-data h2,
 .participant-data h3,
 .participant-data ul {
-  line-height: 1em;
+  line-height: 1.5em;
 }
 .participant-data h2 {
   font-size: 30px;
@@ -437,10 +466,7 @@ nav label {
 #first-dev,
 #first-mentor,
 #third-dev {
-  width: 500px;
-  height: 300px;
   border-radius: 50px;
-  position: absolute;
   background: hsla(0, 2%, 26%, 1);
 
   background: linear-gradient(
@@ -463,16 +489,9 @@ nav label {
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#444141", endColorstr="#312F2F", GradientType=1 );
 }
-#first-dev {
-  top: 150px;
-  right: 10%;
-}
 #second-dev,
 #second-mentor {
-  width: 500px;
-  height: 300px;
   border-radius: 50px;
-  position: absolute;
   background: hsla(0, 3%, 24%, 1);
 
   background: linear-gradient(
@@ -494,32 +513,30 @@ nav label {
   );
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3E3A3A", endColorstr="#2E2B2B", GradientType=1 );
-  z-index: -2;
 }
-#first-mentor {
-  top: calc(300px + 1000px);
-  right: 10%;
-  opacity: 0;
-}
-#second-mentor {
-  top: calc(200px + 1000px);
-  right: 45%;
-  opacity: 0;
-}
-#second-dev {
-  top: 200px;
-  right: 45%;
-}
-#third-dev {
-  bottom: 10vh;
-  right: 25%;
-}
+
 .participant img {
-  height: 75%;
-  position: relative;
+  transform: translateY(-60%) translateX(calc(50% - 100px));
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
   box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.25);
-  left: -10%;
+}
+.developers {
+  width: 90%;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.Mentors {
+  position: absolute;
+  top: 1000px;
+  width: 90%;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 #Devs {
   left: 50px;
@@ -546,19 +563,26 @@ nav label {
   align-items: center;
   top: calc(100vh + 3350px);
   width: 100%;
-  height: 700px;
+  height: 1000px;
   color: white;
   background-color: var(--gunmetal);
 }
 .form {
   margin-top: 50px;
-  width: 30%;
-  height: 400px;
+  width: 40%;
 }
 .line {
+  position: relative;
+  left: 190px;
   width: 40px;
   height: 5px;
   background-color: var(--purple);
+}
+.app-title p {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  width: 70vw;
+  font-size: 15px;
 }
 .app-title {
   font-size: 35px;
@@ -570,7 +594,7 @@ nav label {
   color: #888;
 }
 .app-form {
-  height: 300px;
+  height: 350px;
 }
 
 .app-form-group {
@@ -650,12 +674,15 @@ nav label {
   align-items: center;
   margin-bottom: 40px;
 }
+.contact-data b {
+  width: 120px;
+}
 .footerDiv {
   position: absolute;
   z-index: -10;
   height: 300px;
   width: 100%;
-  top: calc(100vh + 4049px);
+  top: calc(100vh + 4349px);
 }
 footer {
   display: flex;
@@ -750,7 +777,7 @@ footer li {
 
 @media only screen and (max-width: 1300px) {
   nav {
-    width: 1000px;
+    width: 90vw;
   }
   label ul {
     display: none;
@@ -758,7 +785,7 @@ footer li {
   label .hamburger {
     position: relative;
     top: 0px;
-    left: 50px;
+    left: 110px;
     width: 30px;
     height: 4px;
     background: #ffffff;
@@ -847,7 +874,7 @@ footer li {
     position: relative;
     font-size: 15px;
     width: auto;
-    right: 100px;
+    right: 50px;
     top: 0px;
   }
   header {
@@ -873,34 +900,14 @@ footer li {
     left: 70px;
     height: 60px;
   }
-  #second-dev {
-    top: 300px;
-    left: 80px;
-  }
-  #third-dev {
-    bottom: 50px;
-    right: 100px;
-  }
-  #first-mentor {
-    top: 1600px;
-  }
-  #second-mentor {
-    left: 100px;
+  .participant {
+    width: 300px;
   }
   .footerContainer {
     width: 90%;
   }
 }
 @media only screen and (max-width: 1050px) {
-  nav {
-    width: 50%;
-  }
-  label .hamburger {
-    left: 100px;
-  }
-  #contact-btn {
-    right: 60px;
-  }
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -932,40 +939,43 @@ footer li {
     height: 1200px;
     overflow: hidden;
   }
-  #second-dev,
-  #first-dev,
-  #third-dev,
-  #first-mentor,
-  #second-mentor {
-    width: 450px;
+  .participant {
+    flex-direction: row;
     height: 250px;
+    width: 450px;
   }
-  #first-dev {
-    top: 150px;
-    right: calc((100% - 550px) / 2 - 10px);
+  .developers,
+  .Mentors {
+    flex-direction: column;
   }
-  #second-dev {
-    top: 500px;
-    left: calc((100% - 550px) / 2 + 30px);
+  .Mentors {
+    top: 1200px;
   }
-  #third-dev {
-    top: 850px;
-    right: calc((100% - 550px) / 2);
+  .participant img {
+    width: 180px;
+    height: 180px;
+    transform: translateX(-50%);
   }
-  #first-mentor {
-    top: 1350px;
-    right: calc((100% - 550px) / 2 - 10px);
+  .participant-data {
+    bottom: 0px;
+    right: 50px;
   }
-  #second-mentor {
-    top: 1700px;
-    right: calc((100% - 550px) / 2 - 50px);
+  .participant-data h2 {
+    font-size: 30px;
   }
+  .participant-data h3 {
+    font-size: 25px;
+  }
+  .participant-data p {
+    font-size: 20px;
+  }
+
   #contact {
     top: calc(100vh + 3550px);
   }
   #Devs {
     top: 50px;
-    left: calc(50% + 50px);
+    left: calc(50% + 40px);
   }
   #Mentors {
     top: 50px;
@@ -1067,14 +1077,13 @@ footer li {
     left: auto;
     right: 5%;
   }
-  #first-dev,
-  #second-dev,
-  #third-dev,
-  #first-mentor,
-  #second-mentor {
-    left: 10%;
-    right: auto;
-    width: 80%;
+  .participant {
+    width: 380px;
+  }
+  .participant img {
+    transform: translateX(-45%);
+    width: 150px;
+    height: 150px;
   }
   .participant-data h2 {
     font-size: 25px;
@@ -1092,12 +1101,71 @@ footer li {
 }
 @media only screen and (max-width: 510px) {
   .participant img {
-    height: 60%;
-    width: 40%;
-    border-radius: 30%;
-    object-fit: cover;
+    transform: translateY(-50%);
+  }
+  .developers {
+    height: 1000px;
+    margin-top: 100px;
+  }
+  .participant {
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
   }
   .participant-data {
-    height: 80%;
+    right: 0px;
+    bottom: 30%;
+  }
+  .contact-data {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .line {
+    display: none;
+  }
+  .contact-data {
+    width: 200px;
+    height: 500px;
+    margin-top: 50px;
+  }
+  .words span,
+  .wrapper h1 {
+    font-size: 29px;
+  }
+  .words {
+    bottom: 0px;
+    left: -10px;
+  }
+  .project-description h2 {
+    font-size: 30px;
+  }
+  #contact {
+    justify-content: center;
+    height: 1400px;
+  }
+  .footerContainer {
+    height: 400px;
+  }
+  .footerDiv {
+    top: calc(100vh + 4900px);
+    height: 600px;
+  }
+  #Mentors {
+    top: 50px;
+    right: auto;
+    left: auto;
+  }
+  #Devs {
+    top: 10px;
+    right: auto;
+    left: auto;
+  }
+  footer {
+    height: 600px;
+  }
+  .contact-data li {
+    display: flex;
+    flex-direction: column;
   }
 }
