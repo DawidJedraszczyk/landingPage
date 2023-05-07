@@ -1,23 +1,3 @@
-// LAZY LOADING IMGS
-const lazyLoadingIMGs = document.querySelectorAll("img");
-
-const lazyLoad = (target) => {
-  const io = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        const src = img.getAttribute("data-lazy");
-        img.setAttribute("src", src);
-        img.classList.add("fade-in");
-
-        observer.disconnect();
-      }
-    });
-  });
-};
-
-lazyLoadingIMGs.forEach(lazyLoad);
-
 /* FADE ANIMATION */
 const faders = document.querySelectorAll(".fade-in");
 appearOptions = {
@@ -25,7 +5,7 @@ appearOptions = {
   rootMargin: "0px 0px -30px 0px",
 };
 
-let delay = 100;
+let delay = 50;
 
 const appearOnScroll = new IntersectionObserver(function (
   entries,
@@ -106,7 +86,7 @@ function handleFullWidthSizing() {
   document.style.width = `calc(100vw - ${scrollbarWidth}px)`;
 }
 
-// 3D CHART
+/* // 3D CHART
 
 const plotDiv = document.getElementById("plot");
 fetch("../json/chart.json")
@@ -131,9 +111,9 @@ fetch("../json/chart.json")
       groups[item.type].x.push(item.TSNE_3d_0);
       groups[item.type].y.push(item.TSNE_3d_1);
       groups[item.type].z.push(item.TSNE_3d_2);
-    });
+    }); */
 
-    // stwórz tablicę z danymi
+/* // stwórz tablicę z danymi
     const plotData = Object.values(groups);
 
     // przypisz każdemu typowi unikalny kolor
@@ -165,7 +145,7 @@ fetch("../json/chart.json")
 
     // utwórz wykres w elemencie HTML o klasie 'chart'
     Plotly.newPlot(plotDiv, plotData, layout, { responsive: true });
-  });
+  }); */
 
 /*    NAVBAR BACKGROUND ON SCROLL
 

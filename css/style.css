@@ -52,6 +52,7 @@ nav h2 {
 }
 #brandName {
   color: white;
+  z-index: 10;
   cursor: pointer;
 }
 nav ul {
@@ -159,6 +160,7 @@ nav label {
   top: 0px;
   left: 0px;
   line-height: 1em;
+  height: 10;
   letter-spacing: 1px;
 }
 .wrapper {
@@ -167,9 +169,11 @@ nav label {
   padding: 50px 30px;
   display: flex;
   border-radius: 8px;
+  user-select: none;
 }
 .words {
   overflow: hidden;
+  user-select: none;
 }
 .words span {
   display: block;
@@ -225,11 +229,11 @@ nav label {
   display: flex;
 }
 .feature:hover {
-  transition: background-color 100ms ease-in-out;
+  transition: background-color 800ms ease-in-out;
   background-color: #3e3e3b;
 }
 .feature:hover img {
-  transition: filter 100ms ease-in-out;
+  transition: filter 800ms ease-in-out;
   filter: grayscale(0);
 }
 .feature img {
@@ -780,12 +784,13 @@ footer li {
     width: 90vw;
   }
   label ul {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
   label .hamburger {
-    position: relative;
-    top: 0px;
-    left: 110px;
+    position: absolute;
+    top: 37px;
+    right: 50px;
     width: 30px;
     height: 4px;
     background: #ffffff;
@@ -816,30 +821,34 @@ footer li {
     bottom: -10px;
   }
 
-  label input:checked + .menu {
-    box-shadow: 0 0 0 100% #cbcbcb, 0 0 0 100vh #cbcbcb;
-    border-radius: 0;
-  }
-
   label input:checked + .menu .hamburger {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+    background-color: var(--purple);
   }
 
   label input:checked + .menu .hamburger:after {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
+    background-color: var(--purple);
     bottom: 0;
   }
 
   label input:checked + .menu .hamburger:before {
     -webkit-transform: rotate(90deg);
+    background-color: var(--purple);
     transform: rotate(90deg);
     top: 0;
   }
 
   label input:checked + .menu + ul {
     opacity: 1;
+  }
+  label input:checked + .menu {
+    background-color: #cbcbcb;
+    transition: 0.1s ease-in-out;
+    width: 30vw;
+    height: 100vh;
   }
 
   label ul {
@@ -851,7 +860,7 @@ footer li {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: 0.4s 0s ease-in-out;
+    transition: 0.1s ease-in-out;
   }
 
   label a {
