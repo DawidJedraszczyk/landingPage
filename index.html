@@ -20,8 +20,6 @@
           ><h2 id="brandName">Logo</h2></a
         >
         <label>
-          <input type="checkbox" />
-          <span class="menu"> <span class="hamburger"></span> </span>
           <ul>
             <li id="home-btn">
               <a href="#hero" class="smooth-scroll">Home</a>
@@ -39,11 +37,29 @@
           <a href="#contact" id="contact-btn" class="smooth-scroll"
             >Contact us</a
           >
+          <input type="checkbox" id="menu-checkbox" />
+          <span class="hamburger"></span>
         </label>
       </nav>
     </header>
 
     <main>
+      <div class="menu" id="menu">
+        <ul>
+          <li id="home-btn">
+            <a href="#hero" class="smooth-scroll">Home</a>
+          </li>
+          <li id="projects-btn">
+            <a href="#projects" class="smooth-scroll">Business cases</a>
+          </li>
+          <li id="team-btn">
+            <a href="#team" class="smooth-scroll">Team</a>
+          </li>
+          <li id="team-btn">
+            <a href="#contact" class="smooth-scroll">Contact us</a>
+          </li>
+        </ul>
+      </div>
       <section class="hero" id="hero">
         <div id="particles-js"></div>
         <div class="wrapper">

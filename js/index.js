@@ -2,10 +2,10 @@
 const faders = document.querySelectorAll(".fade-in");
 appearOptions = {
   threshold: 0,
-  rootMargin: "0px 0px -30px 0px",
+  rootMargin: "0px 0px -10px 0px",
 };
 
-let delay = 50;
+let delay = 0;
 
 const appearOnScroll = new IntersectionObserver(function (
   entries,
@@ -85,6 +85,21 @@ function handleFullWidthSizing() {
 
   document.style.width = `calc(100vw - ${scrollbarWidth}px)`;
 }
+
+// Menu
+
+let menuCheckbox = document.getElementById("menu-checkbox");
+let menu = document.getElementById("menu");
+let contactBtn = document.getElementById("contact-btn");
+menuCheckbox.addEventListener("click", function () {
+  if (menuCheckbox.checked) {
+    menu.classList.add("menu-opened");
+    contactBtn.style.display = "none";
+  } else {
+    menu.classList.remove("menu-opened");
+    contactBtn.style.display = "flex";
+  }
+});
 
 /* // 3D CHART
 
