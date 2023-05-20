@@ -380,7 +380,7 @@ nav label {
   margin: auto;
 }
 #kiendoNet-img {
-  width: 500px;
+  width: 350px;
   height: 350px;
   margin-top: 75px;
   margin-left: 10%;
@@ -407,6 +407,7 @@ nav label {
   width: 100%;
   height: 500px;
   color: white;
+  overflow: hidden;
 }
 .project-description {
   width: 50%;
@@ -1079,8 +1080,14 @@ footer li {
     flex-wrap: wrap;
     width: 550px;
   }
+#cellPainting-img {
+    margin-left: calc(50vw - 250px);
+    transform: scale(1.3);
+}
+
   #kiendoNet-img {
     margin-left: calc(50vw - 250px);
+    transform: scale(4);
   }
   main {
     height: calc(100vh + 4250px);
