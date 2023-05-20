@@ -75,10 +75,7 @@
 
       <section class="features" id="features">
         <div class="feature" id="first-feature">
-          <img
-            src="http://hostingwp2220996.online.pro/img/utilize%20data%20science.jpeg"
-            alt=""
-          />
+          <img src="/img/1.png" alt="" />
           <div class="feature-description">
             <h2>
               Pioneering
@@ -113,10 +110,7 @@
               requirements.
             </p>
           </div>
-          <img
-            src="http://hostingwp2220996.online.pro/img/hero.jpeg"
-            alt="hero"
-          />
+          <img src="/img/2.png" alt="hero" />
         </div>
       </section>
       <section class="projects" id="projects">
@@ -139,13 +133,18 @@
             </button>
           </div>
           <img
-            src="http://hostingwp2220996.online.pro/img/cellpainting.jpg"
+            src="/img/animation.gif"
+            id="cellPainting-img"
             alt="cell-Painting-project"
           />
         </div>
         <div class="project">
-          <img src="img/konferencja.jpg" alt="Kiendo-net-project" />
-          <div class="project-description">
+          <img
+            id="kiendoNet-img"
+            src="img/konferencja.jpg"
+            alt="Kiendo-net-project"
+          />
+          <div class="project-description" style="">
             <h2>KiendoNet</h2>
             <p>
               Supporting Pathologists in tumor grading via automation of
@@ -157,7 +156,7 @@
             <button
               onclick="location.href='template/kiendoNet.html'"
               class="checkout-btn"
-              id="project-btn-second "
+              id="project-btn-second"
             >
               <b>Read more</b>
             </button>
@@ -173,9 +172,13 @@
             <img src="img/kacper.jpeg" alt="participant" />
             <div class="participant-data">
               <h2>Kacper Trębacz</h2>
-              <p>Python Developer</p>
+              <p>ML Engineer</p>
               <ul>
-                <li>10+ years of experience</li>
+                <li>
+                  Thanks to his extensive expertise in data science and
+                  statistics, Kacper seamlessly integrates innovations straight
+                  from scientific papers into the forefront of our operations.
+                </li>
               </ul>
             </div>
           </div>
@@ -183,9 +186,13 @@
             <img src="img/photo_jan_gru2.jpg" alt="participant" />
             <div class="participant-data">
               <h2>Jan Gruszczyński</h2>
-              <p>Bioinformatician</p>
+              <p>Product Manager</p>
               <ul>
-                <li>10+ years of experience</li>
+                <li>
+                  Jan's experience as both a MedTech and AI engineer provides
+                  invaluable insights, enabling us to establish meaningful
+                  connections between both worlds.
+                </li>
               </ul>
             </div>
           </div>
@@ -193,31 +200,32 @@
             <img src="img/maciej_filanowicz.JPG " alt="participant" />
             <div class="participant-data">
               <h2>Maciej Filanowicz</h2>
-              <p>Python Developer</p>
+              <p>MLOps Engineer</p>
               <ul>
-                <li>10+ years of experience</li>
+                <li>
+                  Maciej’s impeccably strong foundation in machine learning and
+                  data engineering bridges the gap between our cloud-based AI
+                  tech stack and production ready software.
+                </li>
               </ul>
             </div>
           </div>
         </div>
         <div class="Mentors">
           <div class="participant" id="first-mentor">
-            <img src="img/2.jpg" alt="participant" />
+            <img src="img/Darek.jpg" alt="participant" />
             <div class="participant-data">
-              <h2>Imie Nazwisko</h2>
-              <p>Python Developer</p>
+              <h2 style="text-align: center">
+                Ph.D., D.Sc. Dariusz Brzeziński
+              </h2>
+              <p>MedTech Expert</p>
               <ul>
-                <li>30+ years of experience,</li>
-              </ul>
-            </div>
-          </div>
-          <div class="participant" id="second-mentor">
-            <img src="img/1.jpg" alt="participant" />
-            <div class="participant-data">
-              <h2>Imie Nazwisko</h2>
-              <p>Bioinformatician</p>
-              <ul>
-                <li>30+ years of experience,</li>
+                <li>
+                  Dariusz’s vast academic and biotech knowledge steers our team
+                  in the development of cutting-edge, data-driven solutions in
+                  the medical technology space. His expertise proves to be
+                  invaluable.
+                </li>
               </ul>
             </div>
           </div>
@@ -226,7 +234,10 @@
         <div class="participant-type" id="Mentors">Mentors</div>
       </section>
       <section id="contact">
-        <div class="form">
+        <form
+          action="https://formsubmit.io/send/office@biolify.ai"
+          method="POST"
+        >
           <div class="app-title">
             <span>CONTACT</span>
             <span style="color: var(--purple)">US</span>
@@ -249,21 +260,25 @@
                 <input class="app-form-control" placeholder="MESSAGE" />
               </div>
               <div class="app-form-group buttons">
-                <button class="checkout-btn" id="form-button">SEND</button>
+                <input
+                  class="checkout-btn"
+                  id="form-button"
+                  type="submit"
+                  value="Submit"
+                >
+                  
+                </button>
               </div>
             </div>
           </div>
-        </div>
+        </form>
         <div class="contact-data">
           <ul>
             <li>
-              <img src="img/id-card.png" alt="" /><b>Name:</b>Imie Nazwisko
+              <img src="img/mail.png" alt="" /><b>Email:</b>office@biolify.ai
             </li>
             <li>
-              <img src="img/mail.png" alt="" /><b>Email:</b>nazwafirmy@gmail.com
-            </li>
-            <li>
-              <img src="img/telephone.png" alt="" /><b>Phone:</b>+48 123 456 789
+              <img src="img/telephone.png" alt="" /><b>Phone:</b>+48 530 787 002
             </li>
           </ul>
         </div>

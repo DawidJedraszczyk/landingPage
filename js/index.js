@@ -49,7 +49,6 @@ $(document).ready(function () {
 
 function showMentors() {
   document.getElementById("first-mentor").style.opacity = "1";
-  document.getElementById("second-mentor").style.opacity = "1";
   mentors.classList.add("active");
   developers.classList.remove("active");
   const elements = document.querySelectorAll(".participant");
@@ -114,3 +113,15 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("header-scrolled");
   }
 });
+
+// team animation to show details
+
+const showDetails = (prop) => {
+  prop.addEventListener("click", () => {
+    prop.classList.contains("participantDetailsShown")
+      ? prop.classList.remove("participantDetailsShown")
+      : prop.classList.add("participantDetailsShown");
+  });
+};
+let participants = document.querySelectorAll(".participant");
+participants.forEach((element) => showDetails(element));
