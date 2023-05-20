@@ -35,6 +35,8 @@
 }
 main {
   background-color: var(--backgroundblack);
+  height: calc(100vh + 3900px);
+  margin-bottom: 300px;
 }
 h2 {
   font-size: 45px;
@@ -70,7 +72,7 @@ header {
   background-color: var(--backgroundblack);
 }
 nav {
-  width: 1200px;
+  width: 80vw;
   display: flex;
   justify-content: space-between;
 }
@@ -260,11 +262,12 @@ nav label {
   display: flex;
 }
 .feature:hover {
-  transition: background-color 400ms ease-in-out;
+  transition: background-color 200ms ease-in;
   background-color: #3e3e3b;
+  cursor: default;
 }
 .feature:hover img {
-  transition: filter 800ms ease-in-out;
+  transition: filter 200ms ease-in;
   filter: grayscale(0);
 }
 .feature img {
@@ -396,7 +399,7 @@ nav label {
 }
 .team {
   overflow: hidden;
-  position: absolute;
+  position: relative;
   top: calc(100vh + 2000px);
   width: 100%;
   height: 1000px;
@@ -424,7 +427,6 @@ nav label {
     rgba(23, 23, 21, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#21211f",endColorstr="#171715",GradientType=1);
-  z-index: -2;
 }
 #small-ping-circle {
   width: 400px;
@@ -434,7 +436,6 @@ nav label {
   position: absolute;
   top: -12vh;
   left: -5%;
-  z-index: -3;
 }
 .participant-type {
   cursor: pointer;
@@ -457,6 +458,7 @@ nav label {
   box-shadow: 2px 4px 4px 0px rgb(0, 0, 0);
   width: 380px;
   height: 280px;
+  z-index: 1;
 }
 .changeVis {
   transform: translateY(-1000px);
@@ -546,27 +548,27 @@ nav label {
   box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
 .developers {
-  width: 90%;
-  height: 1000px;
+  height: 900px;
+  width: 80vw;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .Mentors {
   position: absolute;
   top: 1000px;
-  width: 90%;
+  width: 80vw;
   height: 1000px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 #Devs {
-  left: 50px;
+  left: 10vw;
   bottom: 180px;
 }
 #Mentors {
-  left: 50px;
+  left: 10vw;
   bottom: 140px;
 }
 #big-background-circle {
@@ -577,20 +579,16 @@ nav label {
   position: absolute;
   top: -250px;
   right: -40px;
-  z-index: -1;
 }
 #contact {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: space-around;
   align-items: center;
   top: calc(100vh + 2900px);
-  margin-bottom: 700px;
   width: 100%;
   height: 1000px;
   color: white;
-  margin-bottom: 700px;
-  /* background-color: var(--gunmetal); */
   background: linear-gradient(
     90deg,
     rgba(17, 43, 52, 1) 0%,
@@ -811,10 +809,14 @@ footer li {
     transform: translateX(0);
   }
 }
-
+@media only screen and (max-width: 1450px) {
+  .participant {
+    width: 300px;
+  }
+}
 @media only screen and (max-width: 1300px) {
   nav {
-    width: 90vw;
+    width: 80vw;
   }
   label ul {
     display: flex;
@@ -882,6 +884,7 @@ footer li {
     right: 0px;
     background-color: var(--backgroundblack);
     transition: 0.5s ease-in-out;
+    z-index: 2;
   }
 
   .menu-opened ul {
@@ -894,7 +897,6 @@ footer li {
   }
   .menu-opened {
     width: 400px;
-    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -910,12 +912,16 @@ footer li {
     text-decoration: none; /* usuwa podkreślenie */
     color: white;
   }
+  #contact {
+    top: calc(100vh + 3000px);
+  }
   #contact-btn {
     position: relative;
     font-size: 15px;
     width: auto;
     right: 20px;
     top: 0px;
+    transition: opacity 500ms ease-in-out;
   }
 
   #first-dev {
@@ -943,12 +949,18 @@ footer li {
   .footerContainer {
     width: 90%;
   }
+  main {
+    height: calc(100vh + 4000px);
+  }
 }
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1150px) {
   .wrapper {
     display: flex;
     flex-wrap: wrap;
     width: 550px;
+  }
+  main {
+    height: calc(100vh + 4250px);
   }
   .wrapper h1 {
     line-height: 1.6;
@@ -969,9 +981,18 @@ footer li {
   .feature-description,
   .project-description {
     position: relative;
-    width: 65%;
-    left: calc((100% - 65%) / 2);
+    width: 66vw;
+    align-items: center;
+    left: 17vw;
   }
+  .feature-description p,
+  .project-description p,
+  .feature-description H2,
+  .project-description H2 {
+    margin-left: 0px;
+    width: 90%;
+  }
+
   .team {
     height: 1200px;
     overflow: hidden;
@@ -984,6 +1005,7 @@ footer li {
   .developers,
   .Mentors {
     flex-direction: column;
+    width: 100px;
   }
   .Mentors {
     top: 1200px;
@@ -1008,7 +1030,7 @@ footer li {
   }
 
   #contact {
-    top: calc(100vh + 3100px);
+    top: calc(100vh + 3200px);
   }
   #Devs {
     top: 50px;
@@ -1032,17 +1054,24 @@ footer li {
   .footerContainer {
     width: 75%;
   }
-  .footerDiv {
-    top: calc(100vh + 4149px);
-  }
   #big-background-circle {
     width: 500px;
     height: 500px;
     top: -100px;
     right: -60px;
   }
+  #project-btn-first,
+  #project-btn-second {
+    position: relative;
+    margin-left: 0px;
+    left: 20vw;
+  }
 }
 @media only screen and (max-width: 700px) {
+  .feature-description,
+  .project-description {
+    margin-top: 20px;
+  }
   .footerContainer {
     flex-direction: column;
   }
@@ -1065,6 +1094,10 @@ footer li {
   }
   .documents {
     margin-left: 30px;
+  }
+
+  main {
+    margin-bottom: 500px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1092,19 +1125,6 @@ footer li {
   }
   .feature img {
     height: 1000px;
-  }
-  .project-description h2 {
-    width: 50%;
-    margin-left: 13%;
-  }
-  .feature-description,
-  .project-description {
-    width: 96%;
-    left: 2%;
-  }
-  .project-description p {
-    width: 74%;
-    margin-left: 13%;
   }
   .project img {
     opacity: 0;
@@ -1170,9 +1190,19 @@ footer li {
   .footerContainer {
     height: 450px;
   }
+
   .footerDiv {
     top: calc(100vh + 4100px);
     height: 700px;
+  }
+  .projects {
+    height: 1200px;
+  }
+  .project {
+    margin-top: 40px;
+  }
+  .team {
+    top: calc(100vh + 2100px);
   }
   .segments {
     flex-wrap: wrap;
@@ -1183,6 +1213,9 @@ footer li {
   }
   footer {
     height: 700px;
+  }
+  main {
+    margin-bottom: 630px;
   }
 }
 @media only screen and (max-width: 360px) {
@@ -1242,5 +1275,8 @@ footer li {
   }
   .footerContainer {
     height: 500px;
+  }
+  main {
+    height: calc(100vh + 4600px);
   }
 }

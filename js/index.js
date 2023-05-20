@@ -39,7 +39,7 @@ $(document).ready(function () {
         {
           scrollTop: target.offset().top,
         },
-        2500
+        1000
       );
     }
   });
@@ -92,14 +92,18 @@ let menuCheckbox = document.getElementById("menu-checkbox");
 let menu = document.getElementById("menu");
 let contactBtn = document.getElementById("contact-btn");
 menuCheckbox.addEventListener("click", function () {
-  if (menuCheckbox.checked) {
-    menu.classList.add("menu-opened");
-    contactBtn.style.display = "none";
-  } else {
-    menu.classList.remove("menu-opened");
-    contactBtn.style.display = "flex";
+  if (window.innerWidth < 1300) {
+    if (menuCheckbox.checked) {
+      menu.classList.add("menu-opened");
+      contactBtn.style.opacity = "0";
+    } else {
+      menu.classList.remove("menu-opened");
+      contactBtn.style.opacity = "1";
+    }
   }
 });
+
+// header background after 1vh -100px scroll
 
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector("header");
