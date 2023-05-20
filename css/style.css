@@ -79,6 +79,9 @@ nav {
 nav h2 {
   font-size: 30px;
 }
+nav a img {
+  margin-top: 10px;
+}
 #brandName {
   color: white;
   z-index: 10;
@@ -333,6 +336,7 @@ nav label {
   margin-bottom: 20px;
 }
 .feature-description p {
+  text-align: justify;
   font-size: 17px;
 }
 .features .fade-from-left {
@@ -390,6 +394,7 @@ nav label {
   margin-left: 20%;
 }
 .project-description p {
+  text-align: justify;
   width: 60%;
   margin-left: 20%;
 }
@@ -936,6 +941,7 @@ footer li {
   }
   .wrapper h1 {
     line-height: 1.6;
+    width: 670px;
   }
   .words {
     position: relative;
@@ -1072,6 +1078,10 @@ footer li {
   .project-description {
     margin-top: 20px;
   }
+  .feature-description p,
+  .project-description p {
+    text-align: start;
+  }
   .footerContainer {
     flex-direction: column;
   }
@@ -1107,6 +1117,10 @@ footer li {
   .words span,
   .wrapper h1 {
     font-size: 40px;
+  }
+  #Devs,
+  #Mentors {
+    z-index: 5;
   }
   .words {
     left: 65px;
@@ -1171,7 +1185,7 @@ footer li {
   }
   .developers {
     height: 1000px;
-    margin-top: 100px;
+    margin-top: 250px;
   }
   .participant {
     flex-direction: column;
@@ -1182,8 +1196,17 @@ footer li {
     right: 0px;
     bottom: 30%;
   }
+  #contact {
+    top: calc(100vh + 3150px);
+  }
   .contact-data {
     width: 300px;
+  }
+  #third-dev {
+    margin-bottom: 10px;
+  }
+  main {
+    height: calc(100vh + 4200px);
   }
 }
 @media only screen and (max-width: 410px) {
@@ -1215,12 +1238,41 @@ footer li {
     height: 700px;
   }
   main {
-    margin-bottom: 630px;
+    margin-bottom: 800px;
+  }
+  .wrapper h1,
+  .wrapper {
+    font-size: 29px;
+    width: 85%;
+  }
+  .words {
+    left: 0px;
+    height: 40px;
+    top: 10px;
+  }
+  .words span {
+    font-size: 29px;
+    padding-left: 0px;
+  }
+  .contact-data {
+    height: 500px;
+  }
+  #contact {
+    top: calc(100vh + 3250px);
+    height: 1150px;
+  }
+  .contact-data li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 360px) {
   .line {
     display: none;
+  }
+  .contact-data img {
+    margin-right: 0px;
   }
   .contact-data {
     width: 200px;
@@ -1233,14 +1285,14 @@ footer li {
   }
   .words {
     bottom: 0px;
-    left: -10px;
+    width: 250px;
   }
   .project-description h2 {
     font-size: 30px;
   }
   #contact {
     justify-content: center;
-    height: 1400px;
+    height: 1200px;
   }
   #contact-btn {
     display: none;
@@ -1266,10 +1318,6 @@ footer li {
   .categories {
     margin-right: 30px;
   }
-  .contact-data li {
-    display: flex;
-    flex-direction: column;
-  }
   .footerDiv {
     top: calc(100vh + 4400px);
   }
@@ -1277,6 +1325,7 @@ footer li {
     height: 500px;
   }
   main {
-    height: calc(100vh + 4600px);
+    height: calc(100vh + 4450px);
+    margin-bottom: 600px;
   }
 }
