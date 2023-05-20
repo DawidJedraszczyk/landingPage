@@ -116,7 +116,7 @@ window.addEventListener("scroll", function () {
 
 // team animation to show details
 
-const showDetails = (prop) => {
+const showParticipantDetails = (prop) => {
   prop.addEventListener("click", () => {
     prop.classList.contains("participantDetailsShown")
       ? prop.classList.remove("participantDetailsShown")
@@ -124,4 +124,18 @@ const showDetails = (prop) => {
   });
 };
 let participants = document.querySelectorAll(".participant");
-participants.forEach((element) => showDetails(element));
+participants.forEach((element) => showParticipantDetails(element));
+
+//feature animation
+
+const showDescriptionOnFeature = (prop) => {
+  prop.addEventListener("click", () => {
+    if (window.innerWidth < 1300) {
+      prop.classList.contains("featureShowDetails")
+        ? prop.classList.remove("featureShowDetails")
+        : prop.classList.add("featureShowDetails");
+    }
+  });
+};
+let feature = document.querySelectorAll(".feature");
+feature.forEach((element) => showDescriptionOnFeature(element));

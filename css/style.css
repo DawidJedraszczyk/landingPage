@@ -1191,9 +1191,13 @@ footer li {
     width: 75%;
   }
   #big-background-circle {
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     right: -60px;
+  }
+  #small-ping-circle {
+    width: 200px;
+    height: 200px;
   }
   #project-btn-first,
   #project-btn-second {
@@ -1201,6 +1205,12 @@ footer li {
     position: relative;
     margin: 30px 0px 0px 0px;
     left: calc(30vw - 75px);
+  }
+  .featureShowDetails .feature-description p {
+    display: flex;
+  }
+  .featureShowDetails .feature-description h2 {
+    display: none;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -1279,14 +1289,15 @@ footer li {
   .contact-data {
     font-size: 15px;
   }
-  .feature {
-    height: 1000px;
-  }
   .menu-opened {
     width: 100%;
   }
-  .feature img {
-    height: 1000px;
+  .feature-description p {
+    display: none;
+  }
+  .feature-description H2 {
+    text-align: center;
+    width: 100%;
   }
   .project img {
     opacity: 0;
