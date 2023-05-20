@@ -130,7 +130,7 @@ participants.forEach((element) => showParticipantDetails(element));
 
 const showDescriptionOnFeature = (prop) => {
   prop.addEventListener("click", () => {
-    if (window.innerWidth < 1300) {
+    if (window.innerWidth < 600) {
       prop.classList.contains("featureShowDetails")
         ? prop.classList.remove("featureShowDetails")
         : prop.classList.add("featureShowDetails");
