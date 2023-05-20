@@ -710,7 +710,7 @@ form {
 }
 .line {
   position: relative;
-  left: 190px;
+  /*left: 190px;*/
   width: 46px;
   height: 5px;
   background-color: var(--purple);
