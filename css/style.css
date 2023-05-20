@@ -295,7 +295,7 @@ nav label {
   cursor: pointer;
   font-weight: bold;
   box-shadow: 4px 4px 4px 0px rgbA(0, 0, 0, 0.25);
-  background: hsla(286, 67%, 56%, 1);
+  /* background: hsla(286, 67%, 56%, 1);
 
   background: linear-gradient(
     135deg,
@@ -315,7 +315,7 @@ nav label {
     hsla(286, 71%, 37%, 1) 100%
   );
 
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B642DA", endColorstr="#811BA0", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B642DA", endColorstr="#811BA0", GradientType=1 ); */
   border-radius: 14px;
   padding: 5px 10px;
   color: white;
@@ -386,6 +386,12 @@ nav label {
   margin-left: 10%;
   margin-right: calc(40% - 500px);
   box-shadow: 3px 6px 30px 8px black;
+}
+#project-btn-first,
+#project-btn-second {
+  width: 200px;
+  background-color: #888;
+  cursor: default;
 }
 .animation-container {
   width: 50vw;
@@ -1191,7 +1197,7 @@ footer li {
   }
   #project-btn-first,
   #project-btn-second {
-    width: 150px;
+    width: 200px;
     position: relative;
     margin: 30px 0px 0px 0px;
     left: calc(30vw - 75px);
