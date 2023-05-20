@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Biolify</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -125,10 +125,7 @@
               enabling users to promptly identify new potential chemical
               compounds with ease.
             </p>
-            <button
-              class="checkout-btn"
-              id="project-btn-first"
-            >
+            <button class="checkout-btn" id="project-btn-first">
               <b>Read more soon</b>
             </button>
           </div>
@@ -153,10 +150,7 @@
               tool helped in the creation of proposals for new grading
               guidelines.
             </p>
-            <button
-              class="checkout-btn"
-              id="project-btn-second"
-            >
+            <button class="checkout-btn" id="project-btn-second">
               <b>Read more soon</b>
             </button>
           </div>
@@ -233,8 +227,8 @@
         <div class="participant-type" id="Mentors">Mentors</div>
       </section>
       <section id="contact">
-        <form
-          action="https://formsubmit.io/send/office@biolify.ai"
+        <!-- <form
+          action="https://formspree.io/f/xyyaagen"
           method="POST"
         >
           <div class="app-title">
@@ -251,16 +245,16 @@
             </p>
             <div class="app-form">
               <div class="app-form-group">
-                <input class="app-form-control" placeholder="NAME" />
+                <input class="app-form-control" type = "name" placeholder="NAME"  required/>
               </div>
               <div class="app-form-group">
-                <input class="app-form-control" placeholder="EMAIL" />
+                <input class="app-form-control" type="email" placeholder="EMAIL" required />
               </div>
               <div class="app-form-group">
-                <input class="app-form-control" placeholder="CONTACT NO" />
+                <input class="app-form-control" type="phone" placeholder="CONTACT NO" required />
               </div>
               <div class="app-form-group message">
-                <input class="app-form-control" placeholder="MESSAGE" />
+                <input class="app-form-control" type="message" placeholder="MESSAGE"  required/>
               </div>
               <div class="app-form-group buttons">
                 <input
@@ -274,7 +268,68 @@
               </div>
             </div>
           </div>
+        </form> -->
+        <form action="https://formspree.io/f/xyyaagen" method="POST">
+          <div class="app-title">
+            <div class="contact-title">
+              <span>CONTACT</span>
+              <div class="US" style="display: inline-block">
+                <span style="color: var(--purple)">US</span>
+                <div class="line"></div>
+              </div>
+            </div>
+            <p>
+              To receive free analysis of Artificial Intelligence usefulness and
+              practicality for your particular business case.
+            </p>
+            <div class="app-form">
+              <div class="app-form-group">
+                <input
+                  class="app-form-control"
+                  type="text"
+                  name="name"
+                  placeholder="NAME"
+                  required
+                />
+              </div>
+              <div class="app-form-group">
+                <input
+                  class="app-form-control"
+                  type="email"
+                  name="email"
+                  placeholder="EMAIL"
+                  required
+                />
+              </div>
+              <div class="app-form-group">
+                <input
+                  class="app-form-control"
+                  type="tel"
+                  name="phone"
+                  placeholder="CONTACT NO"
+                  required
+                />
+              </div>
+              <div class="app-form-group message">
+                <textarea
+                  class="app-form-control"
+                  name="message"
+                  placeholder="MESSAGE"
+                  required
+                ></textarea>
+              </div>
+              <div class="app-form-group buttons">
+                <input
+                  class="checkout-btn"
+                  id="form-button"
+                  type="submit"
+                  value="Submit"
+                />
+              </div>
+            </div>
+          </div>
         </form>
+
         <div class="contact-data">
           <ul>
             <li>
@@ -292,8 +347,18 @@
         <div class="contact-footer">
           <ul>
             <li>
-              <img src="img/biolify_icon.png" style="height:25px; transform: translateX(-4px);" alt="logo" />
-              <p style="display: inline-block; margin-left: 10px; transform: translateX(-4px);">
+              <img
+                src="img/biolify_icon.png"
+                style="height: 25px; transform: translateX(-4px)"
+                alt="logo"
+              />
+              <p
+                style="
+                  display: inline-block;
+                  margin-left: 10px;
+                  transform: translateX(-4px);
+                "
+              >
                 <b>biolify</b>
               </p>
             </li>
@@ -309,9 +374,7 @@
                 style="width: 20px"
                 alt="location icon"
               />
-              <p style="display: inline-block; margin-left: 10px">
-                Poznań
-              </p>
+              <p style="display: inline-block; margin-left: 10px">Poznań</p>
             </li>
           </ul>
         </div>
@@ -327,7 +390,9 @@
           <div class="social">
             Social
             <ul>
-              <li><a href="https://www.linkedin.com/company/biolify/">Linkedin</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/biolify/">Linkedin</a>
+              </li>
             </ul>
           </div>
           <div class="documents">
