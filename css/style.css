@@ -1080,10 +1080,10 @@ footer li {
     flex-wrap: wrap;
     width: 550px;
   }
-#cellPainting-img {
+  #cellPainting-img {
     margin-left: calc(50vw - 250px);
     transform: scale(1.3);
-}
+  }
 
   #kiendoNet-img {
     margin-left: calc(50vw - 250px);
@@ -1221,10 +1221,6 @@ footer li {
   }
 }
 @media only screen and (max-width: 700px) {
-  #kiendoNet-img,
-  #cellPainting-img {
-    width: 70%;
-  }
   .participant img {
     width: 150px;
     height: 150px;
@@ -1306,12 +1302,12 @@ footer li {
     text-align: center;
     width: 100%;
   }
-  .project img {
-    opacity: 0;
-  }
   .checkout-btn {
     margin-left: auto;
     margin-right: 13%;
+  }
+  .project {
+    height: 600px;
   }
   #Mentors {
     left: 5%;
@@ -1337,7 +1333,12 @@ footer li {
   .participant-data p {
     font-size: 15px;
   }
-
+  #team {
+    top: calc(100vh + 2200px);
+  }
+  #contact {
+    top: calc(100vh + 3300px);
+  }
   #form-button {
     margin-right: 0%;
   }
@@ -1377,7 +1378,7 @@ footer li {
     bottom: 30%;
   }
   #contact {
-    top: calc(100vh + 3200px);
+    top: calc(100vh + 3400px);
   }
   .contact-data {
     width: 300px;
@@ -1387,6 +1388,7 @@ footer li {
   }
   main {
     height: calc(100vh + 4200px);
+    margin-bottom: 700px;
   }
 }
 @media only screen and (max-width: 410px) {
@@ -1424,7 +1426,8 @@ footer li {
     height: 700px;
   }
   main {
-    margin-bottom: 850px;
+    height: calc(100vh + 4550px);
+    margin-bottom: 600px;
   }
   .wrapper h1,
   .wrapper {
@@ -1444,7 +1447,7 @@ footer li {
     height: 500px;
   }
   #contact {
-    top: calc(100vh + 3300px);
+    top: calc(100vh + 3400px);
     height: 1150px;
   }
   .contact-data li {
