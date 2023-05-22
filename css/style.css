@@ -11,10 +11,6 @@
   letter-spacing: 1.2px;
   word-spacing: 1px;
   line-height: 1.5em;
-}
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
-* {
   scrollbar-width: auto;
   scrollbar-color: #212121 #454545;
 }
@@ -510,7 +506,7 @@ nav label {
   align-items: center;
   flex-direction: column;
   display: flex;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   box-shadow: 2px 4px 4px 0px rgb(0, 0, 0);
   width: 380px;
   height: 280px;
