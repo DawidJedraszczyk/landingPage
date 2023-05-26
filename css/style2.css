@@ -147,7 +147,7 @@ nav {
   justify-content: space-between;
 }
 .navContainer img {
-  transform: translateY(8px);
+  transform: translateY(px);
 }
 label {
   display: flex;
@@ -167,9 +167,34 @@ label li {
 #menu-checkbox {
   display: none;
 }
+.menu {
+  height: 100vh;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background-color: var(--backgroundblack);
+  z-index: 3;
+}
+.menu ul {
+  display: block;
+  list-style: none;
+  width: 250px;
+}
+.menu a {
+  font-size: 30px;
+  text-decoration: none;
+}
+.menu a:hover {
+  color: var(--purple);
+}
 .navContainer a {
   text-decoration: none;
 }
+
 #contact-btn {
   height: 30px;
   width: 100px;
@@ -244,7 +269,7 @@ main {
   height: 50%;
   width: 100%;
   display: flex;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   position: relative;
 }
 .feature-description {
@@ -268,7 +293,7 @@ main {
   height: 100%;
   object-fit: cover;
   filter: grayscale(var(--feature-img-grayscale));
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .feature:hover img {
   filter: grayscale(0%);
@@ -311,6 +336,7 @@ main {
   height: 50px;
   font-weight: bold;
   z-index: 1;
+  min-width: 155px;
 }
 .project img {
   max-height: 400px;
@@ -479,10 +505,9 @@ form {
 .app-form-control:focus {
   border-bottom-color: var(--purple);
 }
-#form-button {
+#form-btn {
   position: absolute;
   width: 100px;
-  left: calc(100% - 100px);
   color: var(--text-color);
   background: hsla(286, 67%, 56%, 1);
 
@@ -506,7 +531,7 @@ form {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B642DA", endColorstr="#811BA0", GradientType=1 );
   transition: all 0.5s ease-in-out;
 }
-#form-button:hover {
+#form-btn:hover {
   transform: scale(1.1);
 }
 .contact-data ul {
@@ -610,6 +635,7 @@ footer {
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     height: 4px;
+    z-index: 4;
   }
   .hamburger:after,
   .hamburger:before {
@@ -667,7 +693,7 @@ footer {
     justify-content: space-around;
   }
   form {
-    width: 82%;
+    width: 100%;
   }
   .app-title p {
     width: 100%;
@@ -686,6 +712,9 @@ footer {
 @media only screen and (max-width: 580px) {
   /* header */
   /* main */
+  main {
+    margin-bottom: 400px;
+  }
 
   /*feature */
   .feature {
@@ -731,6 +760,67 @@ footer {
   /*team*/
   #team {
     padding-top: 50px;
+  }
+  .buttonsTeamContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  #first-mentor {
+    width: 80%;
+    left: 1100px;
+  }
+  /* footer */
+  footer {
+    height: 400px;
+  }
+  .segments {
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    max-width: 250px;
+  }
+  .categories,
+  .social {
+    margin: 20px 10px 10px 0px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  /* header */
+  #contact-btn {
+    display: none;
+  }
+  .hamburger {
+    top: 0px;
+  }
+  /* main */
+  #features {
+    height: 1500px;
+  }
+  .participant {
+    min-width: 250px;
+  }
+  #first-mentor p {
+    font-size: 15px;
+  }
+  #contact {
+    height: 800px;
+  }
+  .contact-data {
+    margin-bottom: 70px;
+  }
+  .contact-data li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .contact-data li img {
+    margin: 0px;
+  }
+  #form-btn {
+    width: 150px;
+    left: calc(50% - 75px);
   }
   /* footer */
 }

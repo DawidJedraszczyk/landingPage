@@ -57,3 +57,35 @@ $(document).ready(function () {
     }
   });
 });
+
+/* menu */
+let menuCheckbox = document.getElementById("menu-checkbox");
+let contactBtn = document.getElementById("contact-btn");
+const menuElement = document.createElement("div");
+menuElement.classList.add("menu");
+menuElement.innerHTML = `
+<ul>
+  <li id="home-btn">
+    <a href="#hero" class="smooth-scroll">Home</a>
+  </li>
+  <li id="projects-btn">
+    <a href="#projects" class="smooth-scroll">Business cases</a>
+  </li>
+  <li id="team-btn">
+    <a href="#team" class="smooth-scroll">Team</a>
+  </li>
+  <li id="team-btn">
+    <a href="#contact" class="smooth-scroll">Contact us</a>
+  </li>
+</ul>`;
+menuCheckbox.addEventListener("click", function () {
+  if (window.innerWidth < 1300) {
+    if (menuCheckbox.checked) {
+      document.body.appendChild(menuElement);
+      contactBtn.style.opacity = "0";
+    } else {
+      document.body.removeChild(menuElement);
+      contactBtn.style.opacity = "1";
+    }
+  }
+});
