@@ -137,7 +137,7 @@ nav {
   justify-content: center;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 4;
 }
 
 .navContainer {
@@ -147,7 +147,7 @@ nav {
   justify-content: space-between;
 }
 .navContainer img {
-  transform: translateY(px);
+  transform: translateY(6px);
 }
 label {
   display: flex;
@@ -204,6 +204,7 @@ label li {
   border-radius: var(--border-radius);
   padding: 5px 10px;
   color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 /* hero  */
@@ -632,15 +633,14 @@ footer {
     background-color: white;
     top: 17px;
     width: 30px;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     height: 4px;
-    z-index: 4;
   }
   .hamburger:after,
   .hamburger:before {
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     content: "";
     position: absolute;
     display: block;
@@ -711,6 +711,9 @@ footer {
 }
 @media only screen and (max-width: 580px) {
   /* header */
+  .menu {
+    width: 100vw;
+  }
   /* main */
   main {
     margin-bottom: 400px;
