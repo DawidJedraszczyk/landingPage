@@ -1,7 +1,7 @@
 :root {
   --gunmetal: #112b34;
   --indigo: #203851;
-  --purple: rgb(182, 66, 218);
+  --purple: #b642da;
   --text-color: #c3c3c3;
   --backgroundblack: #21211f;
   --max-width-Desktop: 1200px;
@@ -25,6 +25,10 @@ body,
 html {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
+}
+body{
+  position: relative;
+  z-index: -5;
 }
 
 /*scroll bar */
@@ -181,6 +185,7 @@ label li {
 }
 .menu ul {
   display: block;
+  flex-direction: column;
   list-style: none;
   width: 250px;
 }
@@ -220,8 +225,8 @@ label li {
 
 #particles-js {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .words {
@@ -352,12 +357,37 @@ main {
   justify-content: center;
   align-items: center;
   height: 1600px;
-  padding-top: 100px;
   position: relative;
 }
 #team h2 {
   margin-bottom: 30px;
 }
+
+.arrow-team-btn{
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  z-index: 3;
+  top: 150px;
+  display: none;
+}
+
+#arrow-next-developers, #arrow-prev-developers {
+  top: 500px;
+}
+
+#arrow-next-mentors, #arrow-prev-mentors{
+  top: 1250px;
+}
+
+#arrow-next-developers,#arrow-next-mentors{
+  right: 0px;
+}
+#arrow-prev-developers, #arrow-prev-mentors{
+  left: 0px;
+  transform: rotate(180deg);
+}
+
 .developers {
   display: flex;
   margin: 200px 0px 100px 0px;
@@ -374,8 +404,9 @@ main {
   position: relative;
   border-radius: 5%;
   width: 25%;
-  min-width: 290px;
+  min-width: 300px;
   height: 420px;
+  filter: blur(0px);
   transition: all 1.2s ease-in-out;
 }
 .participant img {
@@ -395,14 +426,14 @@ main {
   text-align: center;
   top: 50px;
 }
-.participant-position {
+.participant__position {
   text-align: center;
   position: absolute;
   bottom: 55%;
   width: 100%;
   text-align: center;
 }
-.participant-description {
+.participant__description {
   text-align: justify;
   position: absolute;
   width: 80%;
@@ -431,9 +462,9 @@ main {
 #third-mentor {
   height: 450px;
 }
-#first-mentor .participant-description,
-#second-mentor .participant-description,
-#third-mentor .participant-description {
+#first-mentor .participant__description,
+#second-mentor .participant__description,
+#third-mentor .participant__description {
   bottom: 55px;
 }
 
@@ -555,7 +586,7 @@ footer {
   position: fixed;
   display: flex;
   justify-content: center;
-  z-index: -5;
+  z-index: -2;
   bottom: 0px;
 }
 .footerContainer {
@@ -582,6 +613,8 @@ footer {
 }
 .segments li a {
   text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
 }
 #copyrights {
   position: absolute;
@@ -599,9 +632,20 @@ footer {
   .feature img {
     object-position: 60% 45%;
   }
+  
+  .participant{
+    filter: blur(0.1rem);
+  }
+  .active-participant{
+    filter: blur(0px);
+  }
   .developers,
   .mentors {
-    justify-content: center;
+    width: 1000px;
+    
+  }
+  .arrow-team-btn{
+    display: block;
   }
   /*footer*/
 }
@@ -683,6 +727,13 @@ footer {
   #third-mentor {
     height: 430px;
   }
+  .participant__description{
+    line-height: 1.5rem;}
+  #first-mentor .participant__description,
+#second-mentor .participant__description,
+#third-mentor .participant__description {
+  bottom: 40px;
+}
   #first-dev,
   #second-dev,
   #third-dev {
@@ -766,13 +817,12 @@ footer {
   #team {
     padding-top: 50px;
   }
-  .buttonsTeamContainer {
-    flex-direction: column;
-    align-items: center;
+  #arrow-next-developers, #arrow-prev-developers {
+    top: 550px;
   }
-  #first-mentor {
-    width: 80%;
-    left: 1100px;
+  
+  #arrow-next-mentors, #arrow-prev-mentors{
+    top: 1300px;
   }
   /* footer */
   footer {
@@ -800,9 +850,6 @@ footer {
   /* main */
   #features {
     height: 1500px;
-  }
-  .participant {
-    min-width: 250px;
   }
   #first-mentor p {
     font-size: 15px;

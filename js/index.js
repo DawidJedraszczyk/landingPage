@@ -66,3 +66,70 @@ window.addEventListener("scroll", function () {
     ? navbar.classList.add("GreenGradient")
     : navbar.classList.remove("GreenGradient");
 });
+
+
+// team move right/leftconst MAX_LEFT = 350;
+const MAX_LEFT = 350; //px
+const MIN_LEFT = -350; //px
+
+class SectionMover {
+  constructor(section) {
+    this.Left = 0;
+    this.section = Array.from(section);
+    this.participantClass = "participant";
+    this.activeParticipantClass = "active-participant";
+    this.prevArrow = this.section[0].parentElement.querySelector('.arrow-prev');
+    this.nextArrow = this.section[0].parentElement.querySelector('.arrow-next');
+    this.initTransition();
+  }
+  initTransition(){
+    setTimeout(() => {
+      this.show()
+    }, 10);
+  }
+  calculateLeft(side) {
+    this.Left += side === 'right' ? -350 : 350;
+    this.Left = Math.min(Math.max(this.Left, MIN_LEFT), MAX_LEFT);
+    return this;
+  }
+  show(){
+    this.section.forEach(element => {
+      element.style.left = `${this.Left}px`;
+    });
+    return this;
+  }
+  changeActiveParticipant(){
+    this.section.forEach((element, index) => {
+      element.classList.remove(this.activeParticipantClass)
+      if ((this.Left === MAX_LEFT) && (index === 0)) element.classList.add(this.activeParticipantClass)
+      else if ((this.Left === 0) && (index === 1)) element.classList.add(this.activeParticipantClass)
+      else if ((this.Left === MIN_LEFT) && (index === 2)) element.classList.add(this.activeParticipantClass)
+    })
+    return this;
+  }
+  hideArrow(){
+    if (this.Left === MAX_LEFT) this.prevArrow.style.display="none";
+    else if (this.Left === MIN_LEFT) (this.nextArrow.style.display="none")
+    else {
+      this.prevArrow.style.display="block";
+      this.nextArrow.style.display="block";
+    }
+    return this;
+  }
+  move(side){
+    this.calculateLeft(side).changeActiveParticipant().hideArrow().show();
+    return this;
+  }
+
+}
+
+const developersMover = new SectionMover(document.getElementsByClassName("developer"));
+const mentorsMover = new SectionMover(document.getElementsByClassName("mentor"));
+
+document.getElementById("arrow-next-developers").addEventListener("click", () => developersMover.move('right'));;
+document.getElementById("arrow-prev-developers").addEventListener("click", () => developersMover.move('left'));
+
+document.getElementById("arrow-next-mentors").addEventListener("click", () => mentorsMover.move('right'));
+document.getElementById("arrow-prev-mentors").addEventListener("click", () => mentorsMover.move('left'));
+
+
