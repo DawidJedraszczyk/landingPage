@@ -351,41 +351,29 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 750px;
+  height: 1600px;
+  padding-top: 100px;
   position: relative;
 }
-#team button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-#devsBtn,
-#mentorsBtn {
-  font-size: 30px;
-  text-align: start;
-}
-.buttonsTeamContainer {
-  display: flex;
-  position: absolute;
-  bottom: 50px;
-  width: 500px;
-  justify-content: space-between;
-}
-.active {
-  color: var(--purple);
+#team h2 {
+  margin-bottom: 30px;
 }
 .developers {
   display: flex;
-  justify-content: space-between;
+  margin: 200px 0px 100px 0px;
   width: 86%;
+  justify-content: space-between;
 }
 .mentors {
-  position: absolute;
+  display: flex;
+  margin-top: 200px;
+  width: 86%;
+  justify-content: space-between;
 }
 .participant {
   position: relative;
   border-radius: 5%;
-  width: 20%;
+  width: 25%;
   min-width: 290px;
   height: 420px;
   transition: all 1.2s ease-in-out;
@@ -419,25 +407,34 @@ main {
   position: absolute;
   width: 80%;
   height: 180px;
-  bottom: 20px;
+  bottom: 30px;
   left: 10%;
 }
 #first-mentor {
-  position: relative;
-  opacity: 0;
-  width: 450px;
-  left: calc(1100px + 50% - 225px);
+  opacity: 1;
 }
 #first-dev,
-#second-dev {
+#second-dev,
+#first-mentor,
+#second-mentor {
   margin-right: 20px;
 }
 #third-dev,
-#second-dev {
+#second-dev,
+#third-mentor,
+#second-mentor {
   margin-left: 20px;
 }
-.changeVis {
-  transform: translateX(-1100px);
+
+#first-mentor,
+#second-mentor,
+#third-mentor {
+  height: 450px;
+}
+#first-mentor .participant-description,
+#second-mentor .participant-description,
+#third-mentor .participant-description {
+  bottom: 55px;
 }
 
 /* form and contact */
@@ -602,8 +599,8 @@ footer {
   .feature img {
     object-position: 60% 45%;
   }
-  .developers {
-    width: 150%;
+  .developers,
+  .mentors {
     justify-content: center;
   }
   /*footer*/
@@ -681,12 +678,17 @@ footer {
     filter: grayscale(20%);
   }
   /* team */
-  .buttonsTeamContainer {
-    width: 70%;
+  #first-mentor,
+  #second-mentor,
+  #third-mentor {
+    height: 430px;
   }
-  #first-mentor p {
-    font-size: 17px;
+  #first-dev,
+  #second-dev,
+  #third-dev {
+    height: 410px;
   }
+
   /* contact */
   .contactContainer {
     flex-direction: column;
