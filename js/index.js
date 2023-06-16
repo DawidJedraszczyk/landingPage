@@ -133,3 +133,18 @@ document.getElementById("arrow-next-mentors").addEventListener("click", () => me
 document.getElementById("arrow-prev-mentors").addEventListener("click", () => mentorsMover.move('left'));
 
 
+// captcha
+
+function validate(event) {
+  event.preventDefault();
+  if (!document.getElementById('field').value) {
+    alert("You must add text to the required field");
+  } else {
+    grecaptcha.execute();
+  }
+}
+
+function onload() {
+  var element = document.getElementById('submit');
+  element.onclick = validate;
+}
