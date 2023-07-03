@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,11 +11,12 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
-    />
+    />  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
-    <header class="GreenGradient">
+    <header>
       <nav id="nav">
         <div class="navContainer">
           <a href="#contact" class="smooth-scroll"
@@ -54,15 +55,57 @@
           AI solutions <br />
           made practical for
         </h1>
-        <div class="words">
-          <span>bioscientists</span>
-          <span>physicians</span>
-          <span>bioscientists</span>
+        <div class="swiper hero-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <span>bioscientists</span>
+            </div>
+            <div class="swiper-slide">
+              <span>physicians</span>
+            </div>
+            <div class="swiper-slide">
+              <span>bioscientists</span>
+            </div>
+            <div class="swiper-slide">
+              <span>physicians</span>
+            </div>
+          </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="url(#gradient)" fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,53.3C384,64,480,96,576,101.3C672,107,768,85,864,80C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" style="fill: url(#gradient);"></path>
+          <defs>
+            <linearGradient id="gradient" class="GreenGradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="rgb(17, 43, 52)" />
+              <stop offset="100%" stop-color="rgb(33, 33, 31)" />
+              <stop offset="100%" stop-color="rgb(14, 34, 41)" />
+            </linearGradient>
+          </defs>
+        </svg>
+        
+          
       </section>
     </header>
     <main class="GreenGradient">
-      <section class="BlackGradient" id="features">
+      <section class="" id="features">
+        <div class="feature" id="second-feature">
+          <div class="feature-description Container50">
+            <h2>
+              Harmonizing
+              <span style="color: var(--purple)"> Tech and Practicality </span
+              >in Specialized Fields
+            </h2>
+            <p>
+              Being a company made up of both programmers and practitioners we
+              make communication and thus practicality of our solutions as our
+              number one priority. In highly specialized fields cutting edge
+              tech is not viable without proper compliance to clients needs and
+              rules, as such our priority is not merely to provide technology,
+              but to offer a harmonized solution attuned to our clients' unique
+              requirements.
+            </p>
+          </div>
+          <img src="/img/2.png" alt="Tech-Practicality-img" />
+        </div> 
         <div class="feature" id="first-feature">
           <img src="/img/1.png" alt="AI-Integration-img" />
           <div class="feature-description Container50">
@@ -82,28 +125,9 @@
             </p>
           </div>
         </div>
-        <div class="feature" id="second-feature">
-          <div class="feature-description Container50">
-            <h2>
-              Harmonizing
-              <span style="color: var(--purple)"> Tech and Practicality </span
-              >in Specialized Fields
-            </h2>
-            <p>
-              Being a company made up of both programmers and practitioners we
-              make communication and thus practicality of our solutions as our
-              number one priority. In highly specialized fields cutting edge
-              tech is not viable without proper compliance to clients needs and
-              rules, as such our priority is not merely to provide technology,
-              but to offer a harmonized solution attuned to our clients' unique
-              requirements.
-            </p>
-          </div>
-          <img src="/img/2.png" alt="Tech-Practicality-img" />
-        </div>
       </section>
       <section class="projects" id="projects">
-        <div class="project">
+        <div class="project" id="first-project">
           <div class="project-description Container50">
             <h2>Deep Cell Painting</h2>
             <p>
@@ -117,12 +141,12 @@
             alt="cell-Painting-project"
           />
         </div>
-        <div class="project" id="first-project">
+        <div class="project" id="kiendo-net">
           <img
             class="Container50"
             src="img/grading.gif"
             alt="Kiendo-net-project"
-            style="filter: drop-shadow(20px 15px 4px #171717)"
+            
           />
           <div class="project-description Container50" id="second-project">
             <h2>KiendoNet</h2>
@@ -141,98 +165,122 @@
         <div id="particles-js-team"></div>
         <h2>Our team</h2>
           <h3>Founders</h3>
-        <div class="developers">
-          <img src="./img/next.png" class="arrow-team-btn arrow-prev" id="arrow-prev-developers" alt="arrow-next">
-          <img src="./img/next.png" class="arrow-team-btn arrow-next" id="arrow-next-developers" alt="arrow-next">
-          <div class="developer participant fade-in BlackGradient" id="first-dev">
-            <img src="/img/kacper.jpeg" alt="participant" />
-            <div class="participant__data">
-              <h2>
-                Kacper<br />
-                Trębacz
-              </h2>
-              <p class="participant__position">ML Engineer</p>
-              <p class="participant__description">
-                Thanks to his extensive expertise in data science and
-                statistics, Kacper seamlessly integrates innovations straight
-                from scientific papers into the forefront of our operations.
-              </p>
-            </div>
-          </div>
-          <div class="developer participant active-participant fade-in BlackGradient" id="second-dev">
-            <img src="/img/photo_jan_gru2.jpg" alt="participant" />
-            <div class="participant__data">
-              <h2>Jan <br />Gruszczyński</h2>
-              <p class="participant__position">Product Manager</p>
-              <p class="participant__description">
-                Jan's experience as both a MedTech and AI engineer provides
-                invaluable insights, enabling us to establish meaningful
-                connections between both worlds.
-              </p>
-            </div>
-          </div>
-          <div class="developer participant fade-in BlackGradient" id="third-dev">
-            <img src="/img/maciej_filanowicz.png " alt="participant" />
-            <div class="participant__data">
-              <h2>Maciej <br />Filanowicz</h2>
-              <p class="participant__position">MLOps Engineer</p>
-              <p class="participant__description">
-                Maciej’s impeccably strong foundation in machine learning and
-                data engineering bridges the gap between our cloud-based AI tech
-                stack and production ready software.
-              </p>
-            </div>
-          </div>
+          <div class="developers-slide-container swiper"> S
+                <div class="card-wrapper swiper-wrapper">
+                  <div class="card swiper-slide">
+                    <div class="developer participant BlackGradient " id="first-dev">
+                      <img src="/img/kacper.jpeg" alt="participant" />
+                      <div class="participant__data">
+                        <h2>
+                          Kacper<br />
+                          Trębacz
+                        </h2>
+                        <p class="participant__position">ML Engineer</p>
+                        <p class="participant__description">
+                          Thanks to his extensive expertise in data science and
+                          statistics, Kacper seamlessly integrates innovations straight
+                          from scientific papers into the forefront of our operations.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <div class="developer participant BlackGradient" id="second-dev">
+                      <img src="/img/photo_jan_gru2.jpg" alt="participant" />
+                      <div class="participant__data">
+                        <h2>Jan <br />Gruszczyński</h2>
+                        <p class="participant__position">Product Manager</p>
+                        <p class="participant__description">
+                          Jan's experience as both a MedTech and AI engineer provides
+                          invaluable insights, enabling us to establish meaningful
+                          connections between both worlds.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card swiper-slide">
+                    <div class="developer participant BlackGradient" id="third-dev">
+                      <img src="/img/maciej_filanowicz.png " alt="participant" />
+                      <div class="participant__data">
+                        <h2>Maciej <br />Filanowicz</h2>
+                        <p class="participant__position">MLOps Engineer</p>
+                        <p class="participant__description">
+                          Maciej’s impeccably strong foundation in machine learning and
+                          data engineering bridges the gap between our cloud-based AI tech
+                          stack and production ready software.
+                        </p>
+                      </div>
+                      </div>
+                  </div>
+              </div> 
+            <div class="swiper-pagination-developers"></div>
         </div>
-          <h3>Scientific Advisors</h3>
-        <div class="mentors">
-          <img src="./img/next.png" class="arrow-team-btn arrow-prev" id="arrow-prev-mentors" alt="arrow-next">
-          <img src="./img/next.png" class="arrow-team-btn arrow-next" id="arrow-next-mentors" alt="arrow-next">
-          <div class="mentor participant BlackGradient" id="first-mentor">
-            <img src="img/Darek.jpg" alt="participant" />
-            <div class="participant__data">
-              <h2 style="text-align: center">
-                <p> Ph.D., D.Sc.</p> 
-                Dariusz</br> Brzeziński
-              </h2>
-              <p class="participant__position">MedTech Expert</p>
-              <p class="participant__description">
-                Dariusz’s vast academic and biotech knowledge steers our team in
-                the development of cutting-edge, data-driven solutions in the
-                medical technology space. His expertise proves to be invaluable.
-              </p>
+        <h3>Scientific Advisors</h3>
+      <div class="mentors-slide-container swiper">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+              <div class="mentor participant BlackGradient" id="third-mentor">
+                <img src="img/Darek.jpg" alt="participant" />
+                <div class="participant__data">
+                  <h2 style="text-align: center">
+                    <p> Ph.D., D.Sc.</p> 
+                    Dariusz</br> Brzeziński
+                  </h2>
+                  <p class="participant__position">MedTech Expert</p>
+                  <p class="participant__description">
+                    Dariusz’s vast academic and biotech knowledge steers our team in
+                    the development of cutting-edge, data-driven solutions in the
+                    medical technology space. His expertise proves to be invaluable.
+                  </p>
+                </div>
+                
             </div>
-            
-          </div> <div class="mentor participant active-participant BlackGradient" id="second-mentor">
-            <img src="img/Darek.jpg" alt="participant" />
-            <div class="participant__data">
-              <h2 style="text-align: center">
-                <p >MD</p> 
-                Michał </br> Dopierała
-              </h2>
-              <p class="participant__position">Surgical Pathologist</p>
-              <p class="participant__description">
-                Dariusz’s vast academic and biotech knowledge steers our team in
-                the development of cutting-edge, data-driven solutions in the
-                medical technology space. His expertise proves to be invaluable.
-              </p>
             </div>
-            
-          </div> <div class="mentor participant BlackGradient" id="third-mentor">
-            <img src="img/Darek.jpg" alt="participant" />
-            <div class="participant__data">
-              <h2 style="text-align: center">
-                <p> Ph.D., D.Sc.</p> 
-                Dariusz</br> Brzeziński
-              </h2>
-              <p class="participant__position">MedTech Expert</p>
-              <p class="participant__description">
-                Dariusz’s vast academic and biotech knowledge steers our team in
-                the development of cutting-edge, data-driven solutions in the
-                medical technology space. His expertise proves to be invaluable.
-              </p>
+            <div class="card swiper-slide">
+              <div class="mentor participant BlackGradient" id="third-mentor">
+                <img src="img/Darek.jpg" alt="participant" />
+                <div class="participant__data">
+                  <h2 style="text-align: center">
+                    <p> Ph.D., D.Sc.</p> 
+                    Dariusz</br> Brzeziński
+                  </h2>
+                  <p class="participant__position">MedTech Expert</p>
+                  <p class="participant__description">
+                    Dariusz’s vast academic and biotech knowledge steers our team in
+                    the development of cutting-edge, data-driven solutions in the
+                    medical technology space. His expertise proves to be invaluable.
+                  </p>
+                </div>
+                
+              </div>
             </div>
-            
+            <div class="card swiper-slide">
+              <div class="mentor participant BlackGradient " id="first-mentor">
+                <img src="img/Darek.jpg" alt="participant" />
+                <div class="participant__data">
+                  <h2 style="text-align: center">
+                    <p> Ph.D., D.Sc.</p> 
+                    Dariusz</br> Brzeziński
+                  </h2>
+                  <p class="participant__position">MedTech Expert</p>
+                  <p class="participant__description">
+                    Dariusz’s vast academic and biotech knowledge steers our team in
+                    the development of cutting-edge, data-driven solutions in the
+                    medical technology space. His expertise proves to be invaluable.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="swiper-pagination-mentors"></div>
+      </div>
+    
+      </section>
+      <section class="GreenGradient swiper-container swiper-container-free-mode">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide__logo"><img src="/img/pan_logo.png" alt="Polska_Akademia_Nauk_Logo"/>
+          </div>
+          <div class="swiper-slide slide__logo"><img src="/img/ichbpan_logo.png" alt="Instytut_Chemii_Bioorganicznej"/>
           </div>
         </div>
       </section>
@@ -287,16 +335,20 @@
                     required
                   ></textarea>
                 </div>
-                <input
-                  class="checkout-btn"
+                <button
+                  class="g-recaptcha checkout-btn"
                   id="form-btn"
+                  data-sitekey="6Le9ebomAAAAAI0HdGhod4IEzuTdkX3cjDPwR9vx" 
+                  data-callback='onSubmit' 
+                  data-action='submit'
                   type="submit"
                   value="Submit"
-                />
+                >Submit</button>
               </div>
             </div>
+            <div class="agreement">* Submitting means that You consent to the processing of yours personal data by Biolify company for the purpose of handling yours inquiry and providing a response to the submitted query.
+            </div>
           </form>
-
           <div class="contact-data">
             <ul>
               <li>
@@ -316,11 +368,11 @@
         <div class="contact-footer">
           <ul>
             <li id="contact-Brand">
-              <img src="img/biolify_icon.png" style="height: 25px" alt="logo" />
+              <img src="img/biolify_icon.png" style="height: 18px" alt="logo" />
 
               <b>Biolify</b>
             </li>
-            <li>
+            <li id="contact-Email">
               <img src="img/mail.png" style="width: 20px" alt="mail icon" />
               office@biolify.ai
             </li>
@@ -332,6 +384,10 @@
               />
               Poznań
             </li>
+            <li><p id="copyrights">
+              Copyright © 2023 by Biolify </br> 
+      All Rights Reserved
+            </p></li>
           </ul>
         </div>
         <div class="segments">
@@ -366,11 +422,8 @@
           </div>
         </div>
       </div>
-      <p id="copyrights">
-        Copyright © 2023 by Biolify </br> 
-All Rights Reserved
-      </p>
-    </footer>
+      
+    </footer> <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>1
     <script src="js/index.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>
